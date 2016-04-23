@@ -10,12 +10,14 @@
 			<div class="container">
 				<div class="header-top">
 					<div class="logo">Техномарт</div>
-					<div class="search">
+					<form class="search-form" action="" method="get">
 						<label>Поиск:<input type="text" name="search-q"></label>
+					</form>
+					<div class="shop-control">
+						<a class="bookmarks">Закладки: 0</a>
+						<a class="basket">Корзина: 0</a>
+						<a class="btn btn-order" href="#">Оформить заказ</a>
 					</div>
-					<span class="bookmarks">Закладки: 0</span>
-					<span class="basket">Корзина: 0</span>
-					<a class="btn btn-order" href="#">Оформить заказ</a>
 				</div>
 				<div class="header-middle">
 					<div class="description">
@@ -45,165 +47,175 @@
 				</div>
 			</div>
 		</header>
-		<main class="container">
-			<div class="offers">
-				<div class="offer-card offer-materials offer-new">
-					<h2>Материалы</h2>
-					<a class="btn offer-btn" href="#">На любой вкус</a>
-				</div>
-				<div class="offer-card offer-tools">
-					<h2>Инструмент</h2>
-					<a class="btn offer-btn" href="#">На все случаи</a>
-				</div>
-				<div class="offer-card offer-mechanisms">
-					<h2>Техника</h2>
-					<a class="btn offer-btn" href="#">Для стройки</a>
-				</div>
-				<div class="offer-card offer-discounts">
-					<h2>Скидки 50%</h2>
-					<a class="btn offer-btn" href="#">На 350 товаров</a>
-				</div>
-				<div class="offer-card offer-delivery">
-					<h2>Доставка</h2>
-					<a class="btn offer-btn" href="#">Бесплатно</a>
-				</div>
-				<div class="offer-slider">
-					<div class="slide" id="slide1">
-						<h2 class="slide-title">Перфораторы</h2>
-						<span class="slide-text">Настоящие мужские игрушки</span>
-						<img src="#" width="350" height="350" alt="Изображение слайда" >
+		<main class="main-content">
+			<div class="container">
+				<section class="offers">
+					<div class="offers-first-row">
+						<div class="offer-card offer-materials offer-new">
+							<span class="card-title">Материалы</span>
+							<a class="btn offer-btn" href="#">На любой вкус</a>
+						</div>
+						<div class="offer-card offer-tools">
+							<span class="card-title">Инструмент</span>
+							<a class="btn offer-btn" href="#">На все случаи</a>
+						</div>
+						<div class="offer-card offer-mechanisms">
+							<span class="card-title">Техника</span>
+							<a class="btn offer-btn" href="#">Для стройки</a>
+						</div>
 					</div>
-					<div class="slide" id="slide2">
-						<h2 class="slide-title">Дрели</h2>
-						<span class="slide-text">Соседям на радость!</span>
-						<img src="#" width="350" height="350" alt="Изображение слайда" >
+					<div class="offers-second-row">
+						<div class="left-column">
+							<ul id="offers-slider" class="slider">
+								<li>								
+									<span class="slide-title">Перфораторы</span>
+									<span class="slide-desc">Настоящие мужские игрушки</span>
+									<img src="#" width="350" height="350" alt="Изображение слайда">
+								</li>
+								<li>
+									<span class="slide-title">Дрели</span>
+									<span class="slide-desc">Соседям на радость!</span>
+									<img src="#" width="350" height="350" alt="Изображение слайда" >
+								</li>
+							</ul>
+							<button class="slider-prev">Назад</button>
+		          <button class="slider-next">Вперёд</button>
+							<a class="btn slider-btn" href="#">Открыть каталог</a>	
+						</div>
+						<div class="rigth-column">
+							<div class="offer-card offer-discounts">
+								<span class="card-title">Скидки 50%</span>
+								<a class="btn offer-btn" href="#">На 350 товаров</a>
+							</div>
+							<div class="offer-card offer-delivery">
+								<span class="card-title">Доставка</span>
+								<a class="btn offer-btn" href="#">Бесплатно</a>
+							</div>
+						</div>
 					</div>
-					<button class="slider-prev">Назад</button>
-          <button class="slider-next">Вперёд</button>
-					<a class="btn slider-btn" href="#">Открыть каталог</a>
-				</div>
-			</div>
-			<section class="pop-products clearfix">
-				<div class="pop-header">
-					<span class="pop-title">Популярные товыры:</span>
-					<a class="btn pop-btn" href="#">Все пополурные товары</a>
-				</div>
-				<article class="product-info">
-					<img src="/" width="150" height="150" alt="Фото товара">
-					<div class="product-title">
-						Перфоратов BOSCH<br>
-						BFG 9000
-					</div>
-					<div class="product-old-price">32500 Р.</div>
-					<div class="product-price">25500 P.</div>
-				</article>
-				<article class="product-info">
-					<img src="/" width="150" height="150" alt="Фото товара">
-					<div class="product-title">
-						Перфоратов BOSCH<br>
-						BFG 3000
-					</div>
-					<div class="product-old-price">22500 Р.</div>
-					<div class="product-price">15500 P.</div>
-				</article>
-				<article class="product-info">
-					<img src="/" width="150" height="150" alt="Фото товара">
-					<div class="product-title">
-						Перфоратов BOSCH<br>
-						BFG 6000
-					</div>
-					<div class="product-old-price">30500 Р.</div>
-					<div class="product-price">25500 P.</div>
-				</article>
-				<article class="product-info new-product">
-					<img src="/" width="150" height="150" alt="Фото товара">
-					<div class="product-title">
-						Перфоратов BOSCH<br>
-						BFG 2000
-					</div>
-					<div class="product-old-price"></div>
-					<div class="product-price">12500 P.</div>
-				</article>
-			</section>
-			<section class="pop-producers">
-				<div class="pop-header">
-					<span class="pop-title">Популярные производители:</span>
-					<a class="btn pop-btn" href="#">Все производители</a>
-				</div>
-				<figure class="companies-logo">
-					<a href="#"><img src="/" width="90" height="30" alt="BOSCH"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="Makita"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="DeWALT"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="ИНТЕРСКОЛ"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="HITACHI"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="LG"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="AEG"></a>
-					<a href="#"><img src="/" width="90" height="30" alt="metabo"></a>
-				</figure>
-			</section>
-			<section class="services">
-				<div class="services-header">
-					<h2 class="header-title">Сервисы</h2>
-					<p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-					Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-				</div>
-				<div class="services-menu">
-					<ul>
-						<li><button class="btn btn-active">Доставка</button></li>
-						<li><button class="btn">Гарантия</button></li>
-						<li><button class="btn">Кредит</button></li>
-					</ul>
-				</div>
-				<div class="service-item">
-					<div class="service delivery-service">
-						<h2 class="service-title">Доставка</h2>
-						<p class="service-text">Мы с удовольствием доставим ваш товар прямо<br> 
-							к вашему подъезду совершенно бесплатно!<br>
-							Ведь мы неплохо заработаем,<br>
-							поднимая его на ваш на этаж!
-						</p>
-						<img src="/" width="90" height="30" alt="Доставка">
-					</div>
-					<div class="service guarantee-service">
-						<h2 class="service-title">Гарантия</h2>
-						<p class="service-text">Если купленный у нас товар поломается или заискрит,<br>
-							а также в случае пожара, спровоцированного его возгаранием,<br>  
-							вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-							сгоревший товар на новый.<br>
-							Дом уж восстановите как-нибудь сами.
-						</p>
-						<img src="/" width="90" height="30" alt="Доставка">
-					</div>
-					<div class="service credit-service">
-						<h2 class="service-title">Кредит</h2>
-						<p class="service-text">Залезть в долговую яму стало проще!<br>
-							Кредитные консультанты придут вам на помощь.
-						</p>
-						<a class="btn" href="#" >Отправить заявку</a>
-						<img src="/" width="90" height="30" alt="Доставка">
-					</div>					
-				</div>
-			</section>
-			<div class="info">
-				<section class="info-about">
-					<h2 class="about-title">Компания "Техномарт"</h2>
-					<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
-					<p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-					Техномарт работает со многими транспортными компаниями:</p> 
-					<ul>
-						<li>Деловые линии</li>
-						<li>Автотрейдинг</li>
-						<li>ЖелДорЭкспедиция</li>
-					</ul>
-					<a class="btn about-btn" href="#">Подробнее о компании</a>
 				</section>
-				<section class="info-contacts">
-					<h2 class="contacts-title">Контакты</h2>
-					<p>Вы можете забрать товар сами,<br>
-						заехав в наш офис:</p>
-					<img src="/" width="90" height="30" alt="Карта">
-					<a class="btn" href="#">Заблудились? Напишите нам!</a>
+				<section class="pop-products clearfix">
+					<div class="pop-header">
+						<span class="pop-title">Популярные товыры:</span>
+						<a class="btn pop-btn" href="#">Все пополурные товары</a>
+					</div>
+					<article class="product-info">
+						<img src="/" width="150" height="150" alt="Фото товара">
+						<div class="product-title">
+							Перфоратов BOSCH<br>
+							BFG 9000
+						</div>
+						<div class="product-old-price">32500 Р.</div>
+						<div class="product-price">25500 P.</div>
+					</article>
+					<article class="product-info">
+						<img src="/" width="150" height="150" alt="Фото товара">
+						<div class="product-title">
+							Перфоратов BOSCH<br>
+							BFG 3000
+						</div>
+						<div class="product-old-price">22500 Р.</div>
+						<div class="product-price">15500 P.</div>
+					</article>
+					<article class="product-info">
+						<img src="/" width="150" height="150" alt="Фото товара">
+						<div class="product-title">
+							Перфоратов BOSCH<br>
+							BFG 6000
+						</div>
+						<div class="product-old-price">30500 Р.</div>
+						<div class="product-price">25500 P.</div>
+					</article>
+					<article class="product-info new-product">
+						<img src="/" width="150" height="150" alt="Фото товара">
+						<div class="product-title">
+							Перфоратов BOSCH<br>
+							BFG 2000
+						</div>
+						<div class="product-old-price"></div>
+						<div class="product-price">12500 P.</div>
+					</article>
 				</section>
+				<section class="pop-producers">
+					<div class="pop-header">
+						<span class="pop-title">Популярные производители:</span>
+						<a class="btn pop-btn" href="#">Все производители</a>
+					</div>
+					<figure class="companies-logo">
+						<a href="#"><img src="/" width="90" height="30" alt="BOSCH"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="Makita"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="DeWALT"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="ИНТЕРСКОЛ"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="HITACHI"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="LG"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="AEG"></a>
+						<a href="#"><img src="/" width="90" height="30" alt="metabo"></a>
+					</figure>
+				</section>
+				<section class="services">
+					<div class="services-header">
+						<h2 class="header-title">Сервисы</h2>
+						<p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+						Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+					</div>
+					<div class="services-menu">
+						<ul>
+							<li><button class="btn btn-active">Доставка</button></li>
+							<li><button class="btn">Гарантия</button></li>
+							<li><button class="btn">Кредит</button></li>
+						</ul>
+					</div>
+					<div class="service-item">
+						<div class="service delivery-service">
+							<h2 class="service-title">Доставка</h2>
+							<p class="service-text">Мы с удовольствием доставим ваш товар прямо<br> 
+								к вашему подъезду совершенно бесплатно!<br>
+								Ведь мы неплохо заработаем,<br>
+								поднимая его на ваш на этаж!
+							</p>
+							<img src="/" width="90" height="30" alt="Доставка">
+						</div>
+						<div class="service guarantee-service">
+							<h2 class="service-title">Гарантия</h2>
+							<p class="service-text">Если купленный у нас товар поломается или заискрит,<br>
+								а также в случае пожара, спровоцированного его возгаранием,<br>  
+								вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+								сгоревший товар на новый.<br>
+								Дом уж восстановите как-нибудь сами.
+							</p>
+							<img src="/" width="90" height="30" alt="Доставка">
+						</div>
+						<div class="service credit-service">
+							<h2 class="service-title">Кредит</h2>
+							<p class="service-text">Залезть в долговую яму стало проще!<br>
+								Кредитные консультанты придут вам на помощь.
+							</p>
+							<a class="btn" href="#" >Отправить заявку</a>
+							<img src="/" width="90" height="30" alt="Доставка">
+						</div>					
+					</div>
+				</section>
+				<div class="info">
+					<section class="info-about">
+						<h2 class="about-title">Компания "Техномарт"</h2>
+						<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
+						<p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+						Техномарт работает со многими транспортными компаниями:</p> 
+						<ul>
+							<li>Деловые линии</li>
+							<li>Автотрейдинг</li>
+							<li>ЖелДорЭкспедиция</li>
+						</ul>
+						<a class="btn about-btn" href="#">Подробнее о компании</a>
+					</section>
+					<section class="info-contacts">
+						<h2 class="contacts-title">Контакты</h2>
+						<p>Вы можете забрать товар сами,<br>
+							заехав в наш офис:</p>
+						<img src="/" width="90" height="30" alt="Карта">
+						<a class="btn" href="#">Заблудились? Напишите нам!</a>
+					</section>
+				</div>
 			</div>
 		</main>
 		<footer class="main-footer">
