@@ -11,11 +11,11 @@
 				<div class="header-top">
 					<div class="logo">Техномарт</div>
 					<form class="search-form" action="" method="get">
-						<label>Поиск:<input type="text" name="search-q"></label>
+						<input type="text" name="search-q" placeholder="Поиск:">
 					</form>
 					<div class="shop-control">
-						<a class="bookmarks">Закладки: 0</a>
-						<a class="basket basket-full">Корзина: 10</a>
+						<a class="bookmarks" href="#">Закладки: 0</a>
+						<a class="basket basket-full" href="#">Корзина: 10</a>
 						<a class="btn btn-order" href="#">Оформить заказ</a>
 					</div>
 				</div>
@@ -63,7 +63,9 @@
 						<li><a href="#">Перфораторы</a></li>
 					</ul>
 				</div>
-				<div class="page-title">Перфораторы</div>
+				<div class="page-header">
+					<span class="section-title">Перфораторы</span>
+				</div>
 				<div class="index-content">
 					<div class="index-content-left">
 						<form id="product-filter" action="/" method="post">
@@ -127,7 +129,7 @@
 					</div>
 					<div class="index-content-right clearfix">
 						<div class="side-header">
-							<span class="side-title">Сортировка:</span>
+							<span class="side-header-title">Сортировка:</span>
 							<a class="order-btn" href="#">По цене</a>
 							<a class="order-btn active-btn" href="#">По типу</a>
 							<a class="order-btn active-btn" href="#">По функционалу</a>
@@ -136,7 +138,7 @@
 						</div>
 						<section class="products-list">
 							<article class="product-info">
-								<img src="/" width="150" height="150" alt="Фото товара">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 3000
@@ -145,7 +147,7 @@
 								<div class="product-price">15500 P.</div>
 							</article>
 							<article class="product-info">
-								<img src="/" width="150" height="150" alt="Фото товара">
+								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 6000
@@ -154,7 +156,7 @@
 								<div class="product-price">25500 P.</div>
 							</article>
 							<article class="product-info new-product">
-								<img src="/" width="150" height="150" alt="Фото товара">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 2000
@@ -162,8 +164,8 @@
 								<div class="product-old-price"></div>
 								<div class="product-price">12500 P.</div>
 							</article>
-							<article class="product-info  new-product">
-								<img src="/" width="150" height="150" alt="Фото товара">
+							<article class="product-info">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 3000
@@ -171,8 +173,8 @@
 								<div class="product-old-price">22500 Р.</div>
 								<div class="product-price">15500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="/" width="150" height="150" alt="Фото товара">
+							<article class="product-info new-product">
+								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 6000
@@ -181,7 +183,7 @@
 								<div class="product-price">25500 P.</div>
 							</article>
 							<article class="product-info">
-								<img src="/" width="150" height="150" alt="Фото товара">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
 								<div class="product-title">
 									Перфоратов BOSCH<br>
 									BFG 2000
@@ -189,6 +191,33 @@
 								<div class="product-old-price"></div>
 								<div class="product-price">12500 P.</div>
 							</article>
+							<article class="product-info new-product">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								<div class="product-title">
+									Перфоратов BOSCH<br>
+									BFG 3000
+								</div>
+								<div class="product-old-price">22500 Р.</div>
+								<div class="product-price">15500 P.</div>
+							</article>
+							<article class="product-info">
+								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
+								<div class="product-title">
+									Перфоратов BOSCH<br>
+									BFG 6000
+								</div>
+								<div class="product-old-price">30500 Р.</div>
+								<div class="product-price">25500 P.</div>
+							</article>
+							<article class="product-info">
+								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								<div class="product-title">
+									Перфоратов BOSCH<br>
+									BFG 2000
+								</div>
+								<div class="product-old-price"></div>
+								<div class="product-price">12500 P.</div>
+							</article>														
 						</section>
 						<div class="paginator">
 							<span class="active-page">1</span>
@@ -199,7 +228,7 @@
 					</div>
 				</div>
 				<div class="post-description">
-					<h2 class="description-title">Пара слов о перфораторах</h2>
+					<h2 class="side-title">Пара слов о перфораторах</h2>
 					<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
 						Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
 				</div>
