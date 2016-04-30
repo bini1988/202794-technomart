@@ -140,8 +140,8 @@ body {
 }
 
 .button-common {
-	display: block;
-	padding: 12px 0px;
+	display: inline-block;
+	padding: 15px 15px;
 
 	font-size: 14px;
 	line-height: 18px;
@@ -152,6 +152,8 @@ body {
 	color: #ffffff;
 	background-color: #ee3643;
 	border: none;
+	outline: none;
+	cursor: pointer;
 }
 
 .header-top {
@@ -578,23 +580,29 @@ a:active {
 	position: relative;
 }
 
-.slider 
-.slide-header {
-	position: absolute;
-	top: 27px;
-	left: 26px;
-
-	color: #ffffff;
-}
-
 .slider-slide {
-	display: none;
 	position: relative;
+	
+	display: none;
+	height: 226px;
 }
 
 .slider 
 #slide-1 {
 	display: block;
+}
+
+.slider-slide
+.slide-header {
+	position: absolute;
+	top: 27px;
+	left: 26px;
+	
+	width: 300px;
+	margin: 0px;
+	padding: 0px;
+
+	color: #ffffff;
 }
 
 .slider-slide 
@@ -611,6 +619,14 @@ h2 {
 .slider 
 .slide-desc {
 	font-size: 18px;
+}
+
+.slider-slide
+img {
+	padding: 0px;
+	margin: 0px;
+
+	border: none;
 }
 
 .slider 
@@ -645,6 +661,7 @@ h2 {
 	top: 0px;
 	left: 0px;
 
+	width: 170px;
 	margin-top: 200px;
 	margin-left: 20px;
 }
