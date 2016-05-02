@@ -426,12 +426,12 @@ a:active {
 .button-user {
 	display: inline-block;
 
-	padding: 15px 25px;
-	margin-left: 10px;
-
+	padding: 14px 0px;
+	
 	font-size: 21px;
 	line-height: 18px;
 	text-decoration: none;
+	text-align: center;
 
 	color: #000000;
 	background-color: #ffffff;
@@ -439,15 +439,15 @@ a:active {
 
 .user
 .user-enter {
-	padding-top: 13px;
-	padding-bottom: 14px;
-	padding-left: 15px; 
+	width: 120px;
+	padding: 12px 0px;
+	padding-bottom: 13px;
 }
 
 .user
-.user-enter
-.icon-login {
-	padding-right: 10px;
+.user-login {
+	width: 150px;
+	margin-left: 10px;
 }
 
 .button-user:hover {
@@ -522,7 +522,7 @@ a:active {
 }
 
 .index-page {
-	margin-top: 60px;
+	margin-top: 58px;
 }
 
 /*===============================================================
@@ -558,7 +558,7 @@ a:active {
 .offer-card
 .right-side {
 	float: right;
-	width: 95px;
+	width: 85px;
 	padding-left: 20px;
 
 	line-height: 83px;
@@ -749,7 +749,7 @@ img {
 .next-slide {
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	right: -5px;
 
 	margin-top: 110px;
 
@@ -763,7 +763,7 @@ img {
 
 	width: 195px;
 	margin-bottom: 22px;
-	margin-left: 20px;
+	margin-left: 25px;
 }
 
 .rigth-column 
@@ -952,22 +952,41 @@ a:nth-child(4n) {
 	margin-right: 0px;
 }
 
+/*===============================================================
+ *			SERVICES
+ *===============================================================
+ */
+
 .services {
 	padding-top: 30px;
 	background-color: #f2f6f8;
 }
 
-.services-header {
-	margin-top: 38px;
-	margin-bottom: 38px;
+.services p {
+	margin: 0px;
+
+	font-family: "PTSans", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: normal;
 }
 
-.side-title {
+.services-header {
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+.side-header {
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 30px;
+
+
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
 	line-height: 24px;
 	font-weight: normal;
 
-	color: #000000;
 	text-transform: uppercase;
 }
 
@@ -977,6 +996,8 @@ a:nth-child(4n) {
 }
 
 .services-menu {
+	position: relative;
+
 	width: 240px;
 	margin: 0px;
 	padding: 0px;
@@ -984,18 +1005,42 @@ a:nth-child(4n) {
 	list-style: none;
 }
 
+.menu-shadow::after {
+	content: "";
+
+	position: absolute;
+	top: 50%;
+	right: 0px;
+
+	width: 10px;
+	height: 272px;
+	margin-top: -136px;
+
+	background-image: url(../img/menu-shadow.png);
+	background-repeat: no-repeat;
+}
+
 .services-menu 
 .button-menu {
 	width: 240px;
-	padding: 20px;
+	padding: 15px;
+	padding-left: 20px;
 
 	font-size: 21px;
 	line-height: 30px;
+	font-weight: bold;
 
 	color: #ffffff;
 	background-color: #32425c;
 	border: none;
 	text-align: left;
+
+	cursor: pointer;
+}
+
+.services-menu 
+.button-menu:hover:not(.button-active) {
+	background-color: #293449;
 }
 
 .services-menu
@@ -1010,30 +1055,98 @@ a:nth-child(4n) {
 }
 
 .service-slide {
-	display: none;
-	min-height: 284px;
 	position: relative;
+		
+	display: none;
+	height: 284px;
 }
 
-#service-slide-1 {
+.service-slide
+.button-common {
+	width: 195px;
+	margin-top: 30px;
+}
+
+#service-slide-3 {
 	display: block;
 }
 
-.service-slide 
-img {
+.service-slide h2 {
+	margin: 0px;
+	margin-bottom: 28px;
+
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 36px;
+	line-height: 29px;
+
+	text-transform: uppercase;
+
+	color: #32425c;
+}
+
+.service-slide img {
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
 }
 
+/*===============================================================
+ *			INFORMATION
+ *===============================================================
+ */
+
+
 .information {
 	margin-top: 80px;
-	margin-bottom: 95px;
+	margin-bottom: 85px;
+}
+
+.information p {
+	margin: 0px;
+	margin-bottom: 20px;
+
+	font-family: "PTSans", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
 }
 
 .information-left {
 	float: left;
 	width: 540px;
+}
+
+.about-company
+.partners-list {
+	margin: 0px;
+	padding: 0px;
+	
+	margin-top: 25px;
+	margin-bottom: 35px;	
+
+	list-style: none;
+}
+
+.about-company
+.partners-list li {
+	margin-bottom: 20px;
+
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.about-company
+.partners-list li::before {
+	content: "";
+
+	display: inline-block;
+	width: 25px;
+	height: 2px;
+	margin-right: 10px;
+
+	line-height: 20px;
+	vertical-align: middle;
+
+	background-color: #fb565a;
 }
 
 .about-company
@@ -1048,7 +1161,13 @@ img {
 
 .contacts
 .map {
-	margin: 40px 0px;
+	margin: 10px 0px;
+	margin-bottom: 35px;
+}
+
+.contacts
+.button-common {
+	width: 300px;
 }
 
 .footer-content {
@@ -1196,13 +1315,13 @@ a {
 	float: left;
 	width: 220px;
 }
-
+/*
 .side-header {
 	padding: 15px;
 	margin-bottom: 20px;
 
 	background-color: #f7f3ec;
-}
+}*/
 
 .side-header 
 h2 {
