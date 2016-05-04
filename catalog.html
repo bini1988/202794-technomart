@@ -15,8 +15,12 @@
 						<input type="text" name="search-q" placeholder="Поиск:">
 					</form>
 					<div class="shop-control">
-						<a class="shop-bookmarks" href="#">Закладки: 0</a>
-						<a class="shop-basket basket-full" href="#">Корзина: 10</a>
+						<a class="shop-bookmarks" href="#">
+							<span class="shop-icon icon-bookmark"></span>Закладки: 0
+						</a>
+						<a class="shop-basket basket-full" href="#">
+							<span class="shop-icon icon-basket"></span>Корзина: 10
+						</a>
 						<a class="shop-order" href="#">Оформить заказ</a>
 					</div>
 				</div>
@@ -59,10 +63,10 @@
 		<main class="main-content">
 			<div class="container">
 				<ul class="breadcrumbs">
-					<li><a href="#"><span class="home-link"></span></a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Инструмент</a></li>
-					<li><a href="#">Перфораторы</a></li>
+					<li class="icon-home"><a href="#"><span class="home-link"></span></a></li>
+					<li class="icon-right"><a href="#">Каталог</a></li>
+					<li class="icon-right"><a href="#">Инструмент</a></li>
+					<li class="icon-right"><a href="#">Перфораторы</a></li>
 				</ul>
 				<div class="page-header">
 					<span class="section-title">Перфораторы</span>
@@ -70,9 +74,7 @@
 				<div class="catalog-content clearfix">
 					<div class="catalog-content-left">
 						<form id="product-filter" action="/" method="post">
-							<div class="side-header">
-								<h2>Фильтр:</h2>
-							</div>
+							<div class="side-header">Фильтр:</div>
 							<div class="filters">
 								<section class="filter-section">
 									<h2 class="filter-title">Цена:</h2>
@@ -142,85 +144,112 @@
 							</div>
 						</div>
 						<section class="products-list">
-							<article class="product-info">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 3000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">22500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH BFG 3000</div>
+								<div class="discount">22500 Р.</div>
 								<div class="price">15500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 6000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">30500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 6000</div>
+								<div class="discount">30500 Р.</div>
 								<div class="price">25500 P.</div>
 							</article>
-							<article class="product-info new-product">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 2000
+							<article class="product-item new-product">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price"></div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 2000</div>
+								<div class="discount"></div>
 								<div class="price">12500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 3000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">22500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 3000</div>
+								<div class="discount">22500 Р.</div>
 								<div class="price">15500 P.</div>
 							</article>
-							<article class="product-info new-product">
-								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 6000
+							<article class="product-item new-product">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">30500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 6000</div>
+								<div class="discount">30500 Р.</div>
 								<div class="price">25500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 2000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price"></div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 2000</div>
+								<div class="discount"></div>
 								<div class="price">12500 P.</div>
 							</article>
-							<article class="product-info new-product">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 3000
+							<article class="product-item new-product">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">22500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 3000</div>
+								<div class="discount">22500 Р.</div>
 								<div class="price">15500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 6000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price">30500 Р.</div>
+								<div class="product-image">
+									<img src="img/product-3.jpg" width="144" height="128" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 6000</div>
+								<div class="discount">30500 Р.</div>
 								<div class="price">25500 P.</div>
 							</article>
-							<article class="product-info">
-								<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
-								<div class="product-title">
-									Перфоратов BOSCH<br>
-									BFG 2000
+							<article class="product-item">
+								<div class="actions">
+									<a href="#" class="buy">Купить</a>
+									<a href="#" class="bookmark">В закладки</a>
 								</div>
-								<div class="old-price"></div>
+								<div class="product-image">
+									<img src="img/product-2.jpg" width="127" height="112" alt="Фото товара">
+								</div>
+								<div class="product-title">Перфоратов BOSCH	BFG 2000</div>
+								<div class="discount"></div>
 								<div class="price">12500 P.</div>
 							</article>														
 						</section>
@@ -245,7 +274,7 @@
 			<div class="footer-content">
 				<div class="container">
 					<div class="content-row-1 clearfix">
-						<div class="index-logo footer-logo">Техномарт</div>
+						<div class="index-logo">Техномарт</div>
 						<ul class="footer-menu">
 							<li><a href="#">Компания</a></li>
 							<li><a href="#">Новости</a></li>
@@ -256,7 +285,7 @@
 					</div>
 					<div class="content-row-2 clearfix">
 						<div class="footer-contacts">
-							г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+							г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 							+7 (812) 555-05-55
 						</div>
 						<ul class="footer-menu">
@@ -275,17 +304,17 @@
 						Все права защищены
 					</section>
 					<section class="footer-social">
-          	<a class="social-button social-button-vk" href="#">VK</a>
-          	<a class="social-button social-button-fb" href="#">FB</a>
-          	<a class="social-button social-button-inst" href="#">INST</a>
+          	<a class="social-button icon-vk" href="#"></a>
+          	<a class="social-button icon-facebook" href="#"></a>
+          	<a class="social-button icon-instagramm" href="#"></a>
         	</section>
-					<section class="feedback">
-						<span>Обратная связь:</span>
-						<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-					</section>
 					<section class="developers">
 						<span>Разработано -</span>
 						<a href="https://htmlacademy.ru">HTMLAcademy.ru</a>
+					</section>
+					<section class="feedback">
+						<span>Обратная связь:</span>
+						<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 					</section>
 				</div>
 			</div>

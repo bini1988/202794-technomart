@@ -303,10 +303,11 @@ a {
 	color: #ffffff;
 }
 
-.header-top 
 .shop-control
 .shop-icon {
 	padding-right: 10px;
+	line-height: 18px;
+	font-size: 17px;
 	opacity: 0.3;
 }
 
@@ -616,7 +617,7 @@ a:active {
 	display: inline-block;
 	padding: 5px 30px;
 	
-	font-family: "PTSans", sans-serif;
+	font-family: 'PTSans', 'Arial' sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
@@ -718,7 +719,7 @@ h2 {
 
 .slider 
 .slide-desc {
-	font-family: "PTSans", sans-serif;
+	font-family: 'PTSans', 'Arial' sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -1029,7 +1030,7 @@ a:nth-child(4n) {
 .services p {
 	margin: 0px;
 
-	font-family: "PTSans", sans-serif;
+	font-family: 'PTSans', 'Arial' sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: normal;
@@ -1162,14 +1163,14 @@ a:nth-child(4n) {
 
 .information {
 	margin-top: 80px;
-	margin-bottom: 85px;
+	margin-bottom: 82px;
 }
 
 .information p {
 	margin: 0px;
 	margin-bottom: 20px;
 
-	font-family: "PTSans", sans-serif;
+	font-family: 'PTSans', 'Arial' sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 }
@@ -1365,7 +1366,11 @@ a {
 	color: #ffd180;
 }
 
-/* Catalog */
+/*===============================================================
+ *			CATALOG PAGE
+ *===============================================================
+ */
+
 .shop-control
 .basket-full {
 	background-color: #ee3643;
@@ -1392,15 +1397,35 @@ a {
 }
 
 .breadcrumbs {
-	margin: 25px 0px;
+	margin: 20px 0px;
+	padding: 0px;
 }
 
 .breadcrumbs li {
 	display: inline-block;
-	margin: 0px 10px;
+	margin: 0px;
+
+	font-size: 14px;
+	line-height: 20px;
+
+	color: #c1c6ce;
+}
+
+.breadcrumbs li:first-child {
+	font-size: 16px;
 }
 
 .breadcrumbs a {
+	margin-left: 10px;
+	margin-right: 10px;
+
+
+	font-family: 'PTSans', 'Arial' sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: middle;
+
+	color: #000000;
 	text-transform: uppercase;
 	text-decoration: none;
 }
