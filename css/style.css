@@ -236,7 +236,7 @@ input[name="search-q"] {
 	padding-right: 15px;
 
 	font-size: 17px;
-	line-height: 18px;
+	line-height: 19px;
 
 	color: #ffffff;
 	background-color: #293449; 
@@ -288,15 +288,14 @@ input[name="search-q"]:focus + .icon-search {
 }
 
 .header-top 
-.shop-control
-a {
+.shop-control a {
 	display: inline-block;
 	width: 125px;
 	padding: 12px 0px;
 	padding-right: 25px;
 
 	font-size: 17px;
-	line-height: 18px;
+	line-height: 19px;
 	text-decoration: none;
 	text-align: center;
 
@@ -395,12 +394,11 @@ a:active {
 	color: #e9292a;
 	border: 3px solid #ffffff;
 }
-
-.header-content 
+ 
 .contacts 
 .phone
 .icon-phone {
-	margin-right: 35px;
+	margin-right: 30px;
 
 	color: #b7bfc8;
 }
@@ -617,7 +615,7 @@ a:active {
 	display: inline-block;
 	padding: 5px 30px;
 	
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
@@ -719,7 +717,7 @@ h2 {
 
 .slider 
 .slide-desc {
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -826,7 +824,7 @@ img {
 	margin-bottom: 20px;
 	vertical-align: top;
 	
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-weight: bold;
 	font-size: 17px;
 	line-height: 18px;
@@ -1030,7 +1028,7 @@ a:nth-child(4n) {
 .services p {
 	margin: 0px;
 
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: normal;
@@ -1170,7 +1168,7 @@ a:nth-child(4n) {
 	margin: 0px;
 	margin-bottom: 20px;
 
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 }
@@ -1420,7 +1418,7 @@ a {
 	margin-right: 10px;
 
 
-	font-family: 'PTSans', 'Arial' sans-serif;
+	font-family: 'PTSans', 'Arial', sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	vertical-align: middle;
@@ -1527,11 +1525,40 @@ h2 {
 	margin-top: 50px;
 }
 
-.paginator a {
-	padding: 12px;
+.paginator a,
+.paginator span {
+	display: inline-block;
 
+	min-width: 18px;
+	height: 38px;
+
+	padding: 0 10px;
+	margin-right: 5px;
+
+	font-family: 'PTSans', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 38px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: #000000;
+	background-color: #ffffff;
 	border: 1px solid #e5e5e5;
 	text-decoration: none;
+	border-radius: 3px;
+}
+
+.paginator
+.current-page {
+	color: #ffffff;
+	background-color: #ee3643;
+}
+
+.paginator
+.next-page {
+	min-width: 118px;
+	text-transform: uppercase;
 }
 
 .post-description {
