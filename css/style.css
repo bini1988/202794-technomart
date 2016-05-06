@@ -1160,8 +1160,8 @@ a:nth-child(4n) {
 
 .information {
 	position: relative;
-	margin-top: 80px;
-	margin-bottom: 82px;
+	padding-top: 80px;
+	padding-bottom: 82px;
 }
 
 .information p {
@@ -1222,10 +1222,11 @@ a:nth-child(4n) {
 	width: 300px;
 }
 
-.contacts
-.map {
+.contacts-map {
 	margin: 10px 0px;
 	margin-bottom: 35px;
+
+	cursor: pointer;
 }
 
 .contacts
@@ -1370,12 +1371,12 @@ a {
  *===============================================================
  */
 
-
-.modal-content {
+.modal-content-message {
 	position: absolute;
 	top: 205px;
 	left: 50%;
 
+	display: none;
 	width: 460px;
 	padding: 0px 80px;
 	padding-top: 50px;
@@ -1389,20 +1390,45 @@ a {
 			inset 0 -112px 0 0 #f1f1f1;
 }
 
+.modal-content-map {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+
+	display: none;
+	width: 940px;
+	height: 446px;
+
+	padding: 0px;
+	margin: 0px;
+	margin-left: -470px;
+
+	box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-show {
+	display: block;
+}
+
 .modal-content-close {
 	position: absolute;
-	top: 10px;
-	right: 0px;
+	top: 6px;
+	right: 2px;
 
-	width: 22px;
-	height: 22px;
+	width: 30px;
+	height: 30px;
 
 	font-size: 0px;
 
-	background-color: #ffffff;
+	background-color: transparent;
 	border: none;
 	outline: none;
 	cursor: pointer;
+}
+
+.modal-content-message
+.modal-content-close {
+	top: 10px;
 }
 
 .modal-content-close::before,
@@ -1413,7 +1439,7 @@ a {
 	top: 10px;
 	left: 0px;
 
-	width: 20px;
+	width: 25px;
 	height: 5px;
 	background-color: #ee3643;
 	border-radius: 2px;

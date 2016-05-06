@@ -286,21 +286,21 @@
 							<h2 class="side-header">Контакты</h2>
 							<p>Вы можете забрать товар сами,<br>
 								заехав в наш офис:</p>
-							<img class="map" src="img/map.jpg" width="300" height="158" alt="Карта">
-							<a class="button-common" href="#">Заблудились? Напишите нам!</a>
+							<img class="contacts-map" src="img/map.jpg" width="300" height="158" alt="Карта">
+							<a class="button-common button-send-message" href="#">Заблудились? Напишите нам!</a>
 						</section>
 					</div>
-					<div class="modal-content">
+					<div class="modal-content-message">
 						<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 						<form class="message-form" action="/" method="post">
 							<div class="user-id clearfix">
 								<div class="left-column">
 									<label for="name">Ваше имя:</label>
-									<input type="text" id="name" name="user-login" placeholder="Представьтесь, пожалуйста">
+									<input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
 								</div>
 								<div class="right-column">
 									<label for="mail">Ваш e-mail:</label>
-									<input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа">
+									<input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа" required>
 								</div>
 							</div>
 							<label for="message">Текст письма:</label>
@@ -308,6 +308,10 @@
 							<input class="button-common" type="submit" value="Отправить">
 						</form>
 					</div>
+					<div class="modal-content-map">
+      			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123993!2d30.320894616078068!3d59.9387968690479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462565440417" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+    			</div>
 				</div>
 			</div>
 		</main>
@@ -360,5 +364,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="js/script.js"></script>
   </body>
 </html>
