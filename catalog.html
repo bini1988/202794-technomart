@@ -71,13 +71,13 @@
 					<li class="icon-right"><a href="#">Инструмент</a></li>
 					<li class="icon-right"><a href="#">Перфораторы</a></li>
 				</ul>
-				<div class="page-header">
-					<span class="section-title">Перфораторы</span>
-				</div>
-				<div class="catalog-content clearfix">
-					<div class="catalog-content-left">
+				<div class="page-header">Перфораторы</div>
+				<div class="page-content clearfix">
+					<div class="page-content-left">
 						<form id="product-filter" action="/" method="post">
-							<div class="side-header">Фильтр:</div>
+							<div class="column-header">
+								<h2>Фильтр:</h2>
+							</div>
 							<div class="filters">
 								<section class="filter-section">
 									<h2 class="filter-title">Цена:</h2>
@@ -91,7 +91,7 @@
 					            </div>
 					            <div class="price-controls">
 					                <input class="min-price" type="text" value="0">
-					                <span class="prise-sep">&#150;</span>
+					                <span class="price-sep">&#150;</span>
 					                <input class="max-price" type="text" value="3000">
 					            </div>
 					        	</div>
@@ -132,18 +132,20 @@
 									</ul>
 								</section>
 							</div>
-							<input class="button-filter" type="submit"  value="Показать">	
+							<input class="button-common button-filter" type="submit"  value="Показать">	
 						</form>
 					</div>
 					<div class="catalog-content-right">
-						<div class="side-header">
+						<div class="column-header clearfix">
 							<h2>Сортировка:</h2>
 							<div class="catalog-controls">
-								<a class="button-order" href="#">По цене</a>
-								<a class="button-order active-button" href="#">По типу</a>
-								<a class="button-order active-button" href="#">По функционалу</a>
-								<span class="order-upper">&#9650;</span>
-								<span class="order-lower">&#9660;</span>
+								<a class="active-control" href="#">По цене</a>
+								<a href="#">По типу</a>
+								<a href="#">По функционалу</a>
+								<div class="sort-controls">
+									<div class="icon-up-dir active-control"></div>
+									<div class="icon-down-dir"></div>
+								</div>
 							</div>
 						</div>
 						<section class="products-list">
@@ -171,7 +173,7 @@
 								<div class="discount">30500 Р.</div>
 								<div class="price">25500 P.</div>
 							</article>
-							<article class="product-item new-product">
+							<article class="product-item new-mark">
 								<div class="actions">
 									<a href="#" class="buy">Купить</a>
 									<a href="#" class="bookmark">В закладки</a>
@@ -195,7 +197,7 @@
 								<div class="discount">22500 Р.</div>
 								<div class="price">15500 P.</div>
 							</article>
-							<article class="product-item new-product">
+							<article class="product-item new-mark">
 								<div class="actions">
 									<a href="#" class="buy">Купить</a>
 									<a href="#" class="bookmark">В закладки</a>
