@@ -290,6 +290,24 @@
 							<a class="button-common" href="#">Заблудились? Напишите нам!</a>
 						</section>
 					</div>
+					<div class="modal-content">
+						<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+						<form class="message-form" action="/" method="post">
+							<div class="user-id clearfix">
+								<div class="left-column">
+									<label for="name">Ваше имя:</label>
+									<input type="text" id="name" name="user-login" placeholder="Представьтесь, пожалуйста">
+								</div>
+								<div class="right-column">
+									<label for="mail">Ваш e-mail:</label>
+									<input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа">
+								</div>
+							</div>
+							<label for="message">Текст письма:</label>
+							<textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме"></textarea>
+							<input class="button-common" type="submit" value="Отправить">
+						</form>
+					</div>
 				</div>
 			</div>
 		</main>
