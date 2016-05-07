@@ -12,16 +12,12 @@
 				<div class="container clearfix">
 					<div class="index-logo">Техномарт</div>
 					<form class="search-form" action="" method="get">
-						<input type="text" name="search-q" placeholder="Поиск:">
+						<input type="text" name="search-query" placeholder="Поиск:">
 						<span class="icon-search"></span>
 					</form>
 					<div class="shop-control">
-						<a class="shop-bookmarks" href="#">
-							<span class="shop-icon icon-bookmark"></span>Закладки: 0
-						</a>
-						<a class="shop-basket" href="#">
-							<span class="shop-icon icon-basket"></span>Корзина: 0
-						</a>
+						<a class="shop-bookmarks" href="#">Закладки: 0</a>
+						<a class="shop-basket" href="#">Корзина: 0</a>
 						<a class="shop-order" href="#">Оформить заказ</a>
 					</div>
 				</div>
@@ -30,22 +26,15 @@
 		  	<div class="container">
 		  		<div class="content clearfix">
 						<div class="description">
-							Интернет-магазин<br>
-							строительных материалов<br>
-							и инструментов для ремота
+							Интернет-магазин строительных материалов и инструментов для ремота
 						</div>
 						<div class="contacts">
-							<div class="phone">
-								<span class="icon-phone"></span>
-								+7 (812) 555-05-55
-							</div>
+							<div class="phone">+7 (812) 555-05-55</div>
 							<div class="address">г. Сантк-Петербург, ул. Б. Конюшенная, д. 19/8</div>
 						</div>
 						<div class="user">
-							<a class="button-user user-enter icon-login" href="#">
-								Войти
-							</a>
-							<a class="button-user user-login" href="#">Регистрация</a>
+							<a class="btn-user btn-enter" href="#">Войти</a>
+							<a class="btn-user" href="#">Регистрация</a>
 						</div>
 					</div>
 					<nav class="main-navigation">
@@ -62,14 +51,14 @@
 				</div>
 			</div>
 	  </header>
-		<main class="main-content index-page">
+		<main class="index-page-content">
 			<div class="container">
 				<section class="offers">
 					<div class="offers-row-1">
 						<div class="offer-card clearfix offer-materials new-mark">
 							<div class="left-side">
 								<span class="title">Материалы</span>
-								<a class="button-common button-offer" href="#">На любой вкус</a>
+								<a class="btn btn-offer" href="#">На любой вкус</a>
 							</div>
 							<div class="right-side">
 								<img src="img/materials-icon.png" width="44" height="65" alt="Материалы">
@@ -78,7 +67,7 @@
 						<div class="offer-card clearfix offer-tools">
 							<div class="left-side">
 								<span class="title">Инструмент</span>
-								<a class="button-common button-offer" href="#">На все случаи</a>
+								<a class="btn btn-offer" href="#">На все случаи</a>
 							</div>
 							<div class="right-side">
 								<img src="img/tools-icon.png" width="75" height="61" alt="Инструмент">
@@ -87,7 +76,7 @@
 						<div class="offer-card clearfix offer-mechanisms">
 							<div class="left-side">
 								<span class="title">Техника</span>
-								<a class="button-common button-offer" href="#">Для стройки</a>
+								<a class="btn btn-offer" href="#">Для стройки</a>
 							</div>
 							<div class="right-side">
 								<img src="img/mechanisms-icon.png" width="78" height="62" alt="Техника">
@@ -97,34 +86,42 @@
 					<div class="offers-row-2 clearfix">
 						<div class="left-column">
 							<div class="slider">
-								<div class="slider-slide" id="slide-1" >
-									<div class="slide-header">				
-										<h2>Перфораторы</h2>
-										<span class="slide-desc">Настоящие мужские игрушки</span>
+								<input type="radio" id="btn-1" name="toggle" checked>
+				        <input type="radio" id="btn-2" name="toggle">
+				        <div class="slider-controls">
+				          <label for="btn-1"></label>
+				          <label for="btn-2"></label>
+				        </div>
+								<div class="slides">
+									<div class="slide">
+										<div class="slide-header">				
+											<h2>Перфораторы</h2>
+											<span class="slide-desc">Настоящие мужские игрушки</span>
+										</div>
+										<img src="img/offers-slide-1.jpg" width="620" height="266" alt="Изображение слайда" >
+									</div>									
+									<div class="slide">
+										<div class="slide-header">	
+											<h2>Дрели</h2>
+											<span class="slide-desc">Соседям на радость!</span>
+										</div>
+										<img src="img/offers-slide-2.jpg" width="620" height="266" alt="Изображение слайда" >
 									</div>
-									<img src="img/offers-slide-1.jpg" width="620" height="266" alt="Изображение слайда" >
-								</div>									
-								<div class="slider-slide" id="slide-2" >
-									<div class="slide-header">	
-										<h2>Дрели</h2>
-										<span class="slide-desc">Соседям на радость!</span>
-									</div>
-									<img src="img/offers-slide-2.jpg" width="620" height="266" alt="Изображение слайда" >
 								</div>
-								<button class="button-slide prev-slide">
+								<btn class="btn-slide prev-slide">
 									<span class="icon-left"></span>
-								</button>
-								<button class="button-slide next-slide">
+								</btn>
+								<btn class="btn-slide next-slide">
 									<span class="icon-right"></span>
-								</button>
-								<button class="button-common">Открыть каталог</button>		
+								</btn>
+								<btn class="btn">Открыть каталог</btn>		
 							</div>			
 						</div>
 						<div class="rigth-column">
 							<div class="offer-card clearfix offer-discounts">
 								<div class="left-side">
 									<span class="title">Скидки 50%</span>
-									<a class="button-common button-offer" href="#">На 350 товаров</a>
+									<a class="btn btn-offer" href="#">На 350 товаров</a>
 								</div>
 								<div class="right-side">
 									<img src="img/discounts-icon.png" width="59" height="72" alt="Скидки">
@@ -133,7 +130,7 @@
 							<div class="offer-card clearfix offer-delivery">
 								<div class="left-side">
 									<span class="title">Доставка</span>
-									<a class="button-common button-offer" href="#">Бесплатно</a>
+									<a class="btn btn-offer" href="#">Бесплатно</a>
 								</div>
 								<div class="right-side">
 									<img src="img/delivery-icon.png" width="78" height="63" alt="Скидки">
@@ -145,7 +142,7 @@
 				<section class="pop-products">
 					<div class="section-header clearfix">
 						<span class="section-title">Популярные товары:</span>
-						<a class="button-common" href="#">Все пополурные товары</a>
+						<a class="btn" href="#">Все пополурные товары</a>
 					</div>
 					<div class="products-list">
 						<div class="product-item">
@@ -204,7 +201,7 @@
 				<section class="pop-producers">
 					<div class="section-header clearfix">
 						<span class="section-title">Популярные производители:</span>
-						<a class="button-common" href="#">Все производители</a>
+						<a class="btn" href="#">Все производители</a>
 					</div>
 					<figure class="companies-logo">
 						<a href="#"><img src="img/bosch-logo.jpg" width="126" height="37" alt="BOSCH"></a>
@@ -228,9 +225,9 @@
 					<div class="services-content clearfix">
 						<div class="services-content-left">
 							<ul class="services-menu menu-shadow">
-								<li><button class="button-menu button-active">Доставка</button></li>
-								<li><button class="button-menu">Гарантия</button></li>
-								<li><button class="button-menu">Кредит</button></li>
+								<li><button class="btn-menu btn-active">Доставка</button></li>
+								<li><button class="btn-menu">Гарантия</button></li>
+								<li><button class="btn-menu">Кредит</button></li>
 							</ul>
 						</div>
 						<div class="services-content-right">
@@ -258,7 +255,7 @@
 								<p>Залезть в долговую яму стало проще!<br>
 									Кредитные консультанты придут вам на помощь.
 								</p>
-								<a class="button-common" href="#" >Отправить заявку</a>
+								<a class="btn" href="#" >Отправить заявку</a>
 								<img src="img/credit-service-img.png" width="465" height="285" alt="Кредит">
 							</div>					
 					</div>
@@ -278,7 +275,7 @@
 								<li>Автотрейдинг</li>
 								<li>ЖелДорЭкспедиция</li>
 							</ul>
-							<a class="button-common" href="#">Подробнее о компании</a>
+							<a class="btn" href="#">Подробнее о компании</a>
 						</section>
 					</div>
 					<div class="information-right">
@@ -287,11 +284,11 @@
 							<p>Вы можете забрать товар сами,<br>
 								заехав в наш офис:</p>
 							<img class="contacts-map" src="img/map.jpg" width="300" height="158" alt="Карта">
-							<a class="button-common button-send-message" href="#">Заблудились? Напишите нам!</a>
+							<a class="btn btn-send-message" href="#">Заблудились? Напишите нам!</a>
 						</section>
 					</div>
 					<div class="modal-content-message">
-						<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+						<btn class="modal-content-close" type="btn" title="Закрыть">Закрыть</btn>
 						<form class="message-form" action="/" method="post">
 							<div class="user-id clearfix">
 								<div class="left-column">
@@ -305,11 +302,11 @@
 							</div>
 							<label for="message">Текст письма:</label>
 							<textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме"></textarea>
-							<input class="button-common" type="submit" value="Отправить">
+							<input class="btn" type="submit" value="Отправить">
 						</form>
 					</div>
 					<div class="modal-content-map">
-      			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      			<btn class="modal-content-close" type="btn" title="Закрыть">Закрыть</btn>
       			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123993!2d30.320894616078068!3d59.9387968690479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462565440417" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
     			</div>
 				</div>
@@ -349,9 +346,9 @@
 						Все права защищены
 					</section>
 					<section class="footer-social">
-          	<a class="social-button icon-vk" href="#"></a>
-          	<a class="social-button icon-facebook" href="#"></a>
-          	<a class="social-button icon-instagramm" href="#"></a>
+          	<a class="social-btn icon-vk" href="#"></a>
+          	<a class="social-btn icon-facebook" href="#"></a>
+          	<a class="social-btn icon-instagramm" href="#"></a>
         	</section>
 					<section class="developers">
 						<span>Разработано -</span>
