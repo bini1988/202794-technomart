@@ -1183,7 +1183,7 @@ img {
 
 .services-header {
 	margin-top: 40px;
-	margin-bottom: 70px;
+	margin-bottom: 20px;
 }
 
 .side-header {
@@ -1202,19 +1202,27 @@ img {
 
 /* Слайдер Сервисы */
 
-.services-content-left {
-	float: left;
-	width: 240px;
+.services-slider {
+	position: relative;
+	width: 940px;
+	height: 330px;
+}
+
+.services-slider input[type=radio] {
+    position: absolute;
+    opacity: 0;
 }
 
 .services-menu {
-	position: relative;
+	position: absolute;
+	top: 50px;
+	left: 0px;
 
 	width: 240px;
 	margin: 0px;
 	padding: 0px;
 
-	list-style: none;
+	z-index: 100;
 }
 
 .menu-shadow::after {
@@ -1232,11 +1240,13 @@ img {
 	background-repeat: no-repeat;
 }
 
-.services-menu 
-.btn-menu {
-	width: 240px;
-	padding: 15px;
+.services-menu label {
+	display: block;
+	width: 200px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 	padding-left: 20px;
+	padding-right: 20px;
 
 	font-size: 21px;
 	line-height: 30px;
@@ -1250,37 +1260,33 @@ img {
 	cursor: pointer;
 }
 
-.services-menu 
-.btn-menu:hover:not(.btn-active) {
+.services-menu label:hover {
 	background-color: #293449;
 }
 
-.services-menu
-.btn-active {
-	color: #32425c;
-	background-color: #ffffff;
-}
-
-.services-content-right {
-	float: right;
-	width: 620px;
-}
-
 .service-slide {
-	position: relative;
-		
-	display: none;
-	height: 284px;
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .service-slide
+.description {
+	position: absolute;
+	top: 45px;
+	left: 320px;
+}
+
+.service-slide
+.description
 .btn {
 	width: 195px;
 	margin-top: 30px;
-}
-
-#service-slide-1 {
-	display: block;
 }
 
 .service-slide h2 {
@@ -1300,6 +1306,28 @@ img {
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
+}
+
+#menu-item-1:checked ~ .services-menu label[for="menu-item-1"],
+#menu-item-2:checked ~ .services-menu label[for="menu-item-2"],
+#menu-item-3:checked ~ .services-menu label[for="menu-item-3"] { 
+    background: #ffffff;
+}
+
+.service-slide {
+	display: none;
+}
+
+#menu-item-1:checked ~ .service-slides .service-slide:nth-child(1) { 
+	display: block;
+}
+
+#menu-item-2:checked ~ .service-slides .service-slide:nth-child(2) { 
+	display: block;
+}
+
+#menu-item-3:checked ~ .service-slides .service-slide:nth-child(3) { 
+	display: block;
 }
 
 /*=======================================================================
