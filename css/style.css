@@ -760,7 +760,9 @@ img {
 
 	color: #ffffff;
 	background-color: #ee3643;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .offers-row-1 {
@@ -1741,12 +1743,14 @@ img {
 
 .modal-content-show-1 {
 	display: block;
-	animation: zoomin 0.8s;
+	-webkit-animation: zoomin 0.8s;
+	        animation: zoomin 0.8s;
 }
 
 .modal-content-show-2 {
 	display: block;
-	animation: flipin 0.8s;
+	-webkit-animation: flipin 0.8s;
+	        animation: flipin 0.8s;
 }
 
 .modal-content-close {
@@ -1780,11 +1784,15 @@ img {
 }
 
 .modal-content-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 
@@ -1851,6 +1859,18 @@ img {
 
 /* Анимация для всплывающих окон */
 
+@-webkit-keyframes zoomin {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 @keyframes zoomin {
   from {
     opacity: 0;
@@ -1860,6 +1880,20 @@ img {
 
   50% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes flipin {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
