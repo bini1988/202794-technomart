@@ -88,8 +88,8 @@
         <div class="offers-row-2 clearfix">
           <div class="left-column">
             <div class="offers-slider">
-              <input type="radio" id="btn-1" name="offers-toggle" checked>
-              <input type="radio" id="btn-2" name="offers-toggle">
+              <input index="0" id="btn-1" name="offers-toggle" type="radio" checked>
+              <input index="1" id="btn-2" name="offers-toggle" type="radio">
               <div class="slider-controls">
                 <label for="btn-1"></label>
                 <label for="btn-2"></label>
@@ -110,12 +110,8 @@
                   <img src="img/offers-slide-2.jpg" width="620" height="266" alt="Изображение слайда">
                 </div>
               </div>
-              <button class="btn-slide prev-slide">
-                <span class="icon-left"></span>
-              </button>
-              <button class="btn-slide next-slide">
-                <span class="icon-right"></span>
-              </button>
+              <button class="btn-slide prev-slide icon-left"></button>
+              <button class="btn-slide next-slide icon-right"></button>
               <button class="btn">Открыть каталог</button>
             </div>
           </div>
@@ -225,9 +221,9 @@
             <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="services-slider">
-          <input type="radio" id="menu-item-1" name="services-toggle" checked>
-          <input type="radio" id="menu-item-2" name="services-toggle">
-          <input type="radio" id="menu-item-3" name="services-toggle">
+          <input id="menu-item-1" name="services-toggle" type="radio" checked>
+          <input id="menu-item-2" name="services-toggle" type="radio">
+          <input id="menu-item-3" name="services-toggle" type="radio">
           <div class="services-menu menu-shadow">
             <label for="menu-item-1">Доставка</label>
             <label for="menu-item-2">Гарантия</label>

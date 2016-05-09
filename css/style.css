@@ -91,183 +91,105 @@
   content: "\3c";
 }
 
-
-/* "&lt;" */
-
 .icon-right::before {
   content: "\3e";
 }
-
-
-/* "&gt;" */
 
 .icon-basket::before {
   content: "\62";
 }
 
-
-/* "b" */
-
 .icon-facebook::before {
   content: "\66";
 }
-
-
-/* "f" */
 
 .icon-twitter::before {
   content: "\74";
 }
 
-
-/* "t" */
-
 .icon-vk::before {
   content: "\76";
 }
-
-
-/* "v" */
 
 .icon-up::before {
   content: "\2c4";
 }
 
-
-/* "˄" */
-
 .icon-down::before {
   content: "\2c5";
 }
-
-
-/* "˅" */
 
 .icon-left-big::before {
   content: "\2190";
 }
 
-
-/* "←" */
-
 .icon-right-big::before {
   content: "\2192";
 }
-
-
-/* "→" */
 
 .icon-login::before {
   content: "\2386";
 }
 
-
-/* "⎆" */
-
 .icon-logout::before {
   content: "\241b";
 }
-
-
-/* "␛" */
 
 .icon-up-dir::before {
   content: "\25b2";
 }
 
-
-/* "▲" */
-
 .icon-down-dir::before {
   content: "\25bc";
 }
-
-
-/* "▼" */
 
 .icon-circle::before {
   content: "\25cb";
 }
 
-
-/* "○" */
-
 .icon-circle-dot::before {
   content: "\25cf";
 }
-
-
-/* "●" */
 
 .icon-star::before {
   content: "\2605";
 }
 
-
-/* "★" */
-
 .icon-check-off::before {
   content: "\2610";
 }
-
-
-/* "☐" */
 
 .icon-check-on::before {
   content: "\2611";
 }
 
-
-/* "☑" */
-
 .icon-youtube::before {
   content: "\f39e";
 }
-
-
-/* "" */
 
 .icon-home::before {
   content: "🏠";
 }
 
-
-/* "\1f3e0" */
-
 .icon-user::before {
   content: "👨";
 }
-
-
-/* "\1f468" */
 
 .icon-phone::before {
   content: "📞";
 }
 
-
-/* "\1f4de" */
-
 .icon-instagramm::before {
   content: "📷";
 }
-
-
-/* "\1f4f7" */
 
 .icon-search::before {
   content: "🔍";
 }
 
-
-/* "\1f50d" */
-
 .icon-bookmark::before {
   content: "🔖";
 }
-
-
-/* "\1f516" */
 
 
 /*=======================================================================
@@ -700,6 +622,8 @@ img {
 
 	background-color: #32425c;
 	box-shadow: 0 5px 0 0 #293449;
+
+	overflow: hidden;
 }
 
 .main-navigation li {
@@ -748,7 +672,7 @@ img {
  */
 
 .offers {
-	margin-bottom: 53px;
+	margin-bottom: 33px;
 }
 
 .offer-card {
@@ -759,6 +683,7 @@ img {
 	min-height: 73px;
 	padding: 20px 25px;
 	margin-right: 20px;
+	margin-bottom: 20px;
 
 	font-size: 14px;
 	vertical-align: top;
@@ -839,8 +764,6 @@ img {
 }
 
 .offers-row-1 {
-	margin-bottom: 20px;
-
 	font-size: 0px;
 }
 
@@ -868,7 +791,8 @@ img {
 	background-color: #f6b22d;
 }
 
-.offers-row-2 .left-column {
+.offers-row-2 
+.left-column {
 	float: left;
 	width: 620px;
 	padding: 0px;
@@ -887,6 +811,7 @@ img {
 	position: relative;
 	height: 266px;
 	width: 620px;
+	margin-bottom: 20px;
 }
 
 .offer-slide {
@@ -958,11 +883,16 @@ img {
 	cursor: pointer;
 }
 
+.btn-slide::before {
+	width: 20px;
+	margin: 0px;
+}
+
 .offers-slider 
 .prev-slide {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	left: 20px;
 	margin-top: 110px;
 }
 
@@ -970,10 +900,9 @@ img {
 .next-slide {
 	position: absolute;
 	top: 0px;
-	right: -5px;
+	right: 20px;
 
 	margin-top: 110px;
-
 }
 
 .offers-slider input[type=radio] {
@@ -1047,11 +976,6 @@ img {
 	margin-bottom: 20px;
 }
 
-.rigth-column 
-.offer-card:last-child {
-	margin-bottom: 0px;
-}
-
 /*=======================================================================
  *		
  *	POPULAR PRODUCTS
@@ -1067,6 +991,9 @@ img {
 }
 
 .section-title {
+	float: left;
+	width: 600px;
+
 	font-size: 30px;
 	line-height: 38px;
 
@@ -1812,8 +1739,14 @@ img {
 	border: none;
 }
 
-.modal-content-show {
+.modal-content-show-1 {
 	display: block;
+	animation: zoomin 0.8s;
+}
+
+.modal-content-show-2 {
+	display: block;
+	animation: flipin 0.8s;
 }
 
 .modal-content-close {
@@ -1916,7 +1849,33 @@ img {
 	margin-bottom: 37px;
 }
 
+/* Анимация для всплывающих окон */
 
+@keyframes zoomin {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes flipin {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 /*===============================================================
  *			CATALOG PAGE
@@ -2531,9 +2490,16 @@ img {
 	background-color: #f2f6f8;
 }
 
-.post-description 
-.section-title {
+.post-description h2 {
 	margin-top: 15px;
+
+	font-size: 30px;
+	line-height: 38px;
+
+	vertical-align: middle;
+
+	color: #32425c;
+	text-transform: uppercase;
 }
 
 .post-description p {
