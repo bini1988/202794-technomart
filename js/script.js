@@ -1,3 +1,52 @@
+/* Модальное сообщение */
+
+var modalDialogOpenBtns = document.querySelectorAll(".product-item .actions .buy");
+
+var overlay = document.querySelector(".overlay");
+
+for(var counter = 0; counter < modalDialogOpenBtns.length; counter++) {
+		
+	modalDialogOpenBtns[counter].addEventListener("click", function(event) {
+		event.preventDefault();
+
+		modalDialog.classList.add("modal-content-show-1");
+		overlay.classList.add("overlay-show");
+	});
+}
+
+var modalDialog = document.querySelector(".modal-content-dialog");
+
+var modalDialogCancelBtn = document.querySelector(".btn-cancel");
+
+modalDialogCancelBtn.addEventListener("click", function(event) {
+	event.preventDefault();
+
+	modalDialog.classList.remove("modal-content-show-1");
+	overlay.classList.remove("overlay-show");
+});
+
+
+var modalDialogCloseBtn = modalDialog.querySelector(".modal-content-close");
+
+modalDialogCloseBtn.addEventListener("click", function(event) {
+	event.preventDefault();
+
+	modalDialog.classList.remove("modal-content-show-1");
+	overlay.classList.remove("overlay-show");
+});
+
+
+window.addEventListener("keydown", function(event) {
+	if (event.keyCode === 27) {
+		if (modalDialog.classList.contains("modal-content-show-1")) {
+			modalDialog.classList.remove("modal-content-show-1");
+		}
+		if (overlay.classList.contains("overlay-show")) {
+			overlay.classList.remove("overlay-show");
+		}
+	}
+});
+
 /* Форма обратной связи */
 
 var modalMessage = document.querySelector(".modal-content-message");
@@ -24,6 +73,13 @@ modalMessageCloseBtn.addEventListener("click", function(event) {
 	modalMessage.classList.remove("modal-content-show-1");
 });
 
+window.addEventListener("keydown", function(event) {
+	if (event.keyCode === 27) {
+		if (modalMessage.classList.contains("modal-content-show-1")) {
+			modalMessage.classList.remove("modal-content-show-1");
+		}
+	}
+});
 
 /* Карта */
 
@@ -44,6 +100,14 @@ modalMapCloseBtn.addEventListener("click", function(event) {
 	event.preventDefault();
 
 	modalMap.classList.remove("modal-content-show-2");
+});
+
+window.addEventListener("keydown", function(event) {
+	if (event.keyCode === 27) {
+		if (modalMap.classList.contains("modal-content-show-2")) {
+			modalMap.classList.remove("modal-content-show-2");
+		}
+	}
 });
 
 /* Слайдер на главной странице */
@@ -78,18 +142,4 @@ offersSliderNextBtn.addEventListener("click", function(event) {
 	var nextIndex = (currentIndex + 1) % sliderRadioCount;
 
 	sliderRadio[nextIndex].checked = true;
-});
-
-/* Общее */
-
-window.addEventListener("keydown", function(event) {
-	if (event.keyCode === 27) {
-		if (modalMessage.classList.contains("modal-content-show-1")) {
-			modalMessage.classList.remove("modal-content-show-1");
-		}
-
-		if (modalMap.classList.contains("modal-content-show-2")) {
-			modalMap.classList.remove("modal-content-show-2");
-		}
-	}
 });
