@@ -294,6 +294,7 @@ body {
 
 img {
 	max-width: 100%;
+	height: auto;
 }
 
 .clearfix::after {
@@ -360,6 +361,9 @@ img {
 	color: #ffffff;
 	background-color: #ee3643;
 	box-shadow: 0 5px 0 0 #b52933;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .index-logo:hover {
@@ -898,12 +902,12 @@ img {
 .offer-slide 
 .slide-header {
 	position: absolute;
-	top: 27px;
-	left: 26px;
+	top: 0px;
+	left: 0px;
 	
-	width: 350px;
+	width: 570px;
 	max-height: 60px;
-	margin: 0px;
+	margin: 25px;
 	padding: 0px;
 
 	color: #ffffff;
@@ -919,13 +923,22 @@ img {
 	line-height: 30px;
 
 	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .offer-slide 
 .slide-desc {
+	margin: 0px;
+
 	font-family: 'PTSans', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .offer-slide img {
@@ -1452,6 +1465,12 @@ img {
 	position: absolute;
 	top: 45px;
 	left: 320px;
+
+	height: 240px;
+	width: 540px;
+	z-index: 60;
+
+	overflow: hidden;
 }
 
 .service-slide .btn {
@@ -2103,6 +2122,8 @@ img {
 
 	color: #32425c;
 	background-color: #f2f6f8;
+
+	overflow: hidden;
 }
 
 .page-content-left {
@@ -2124,6 +2145,8 @@ img {
 	color: #000000;
 	background-color: #f7f3ec;
 	border-radius: 3px;
+
+	overflow: hidden;
 }
 
 .column-header h2 {
@@ -2134,6 +2157,7 @@ img {
 	font-size: 13px;
 	line-height: 23px;
 	font-weight: normal;
+
 }
 
 .filter-section {
@@ -2141,6 +2165,7 @@ img {
 	margin-bottom: 23px;
 
 	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
 }
 
 .filter-section:last-child {
