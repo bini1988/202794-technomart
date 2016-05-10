@@ -1630,7 +1630,7 @@ img {
   left: 50%;
   display: none;
   width: 460px;
-  height: 230px;
+  min-height: 230px;
   padding: 0px 80px;
   padding-top: 50px;
   margin-left: -310px;
@@ -1649,7 +1649,7 @@ img {
 
 .modal-content-dialog .dialog-message {
   width: 360px;
-  height: 70px;
+  min-height: 70px;
   padding: 0px;
   padding-top: 20px;
   margin-bottom: 25px;
@@ -1657,7 +1657,6 @@ img {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 35px;
-  overflow: hidden;
 }
 
 .message-icon-ok {
