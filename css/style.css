@@ -209,7 +209,7 @@ img {
 .btn {
   display: inline-block;
   padding: 10px 10px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -242,6 +242,7 @@ img {
 
 .header-top {
   background-color: #293449;
+  height: 42px;
 }
 
 .index-logo {
@@ -272,12 +273,14 @@ img {
   display: inline-block;
   float: left;
   width: 270px;
+  height: 42px;
   vertical-align: top;
 }
 
 .search-form input[name="search-query"] {
   width: 200px;
-  padding: 12px 20px;
+  height: 42px;
+  padding: 0px 20px;
   padding-left: 50px;
   font-size: 17px;
   line-height: 18px;
@@ -342,18 +345,20 @@ img {
 .shop-control {
   float: right;
   width: 450px;
+  height: 42px;
   font-size: 0px;
 }
 
 .shop-control a {
   display: inline-block;
   width: 110px;
-  padding: 12px 20px;
+  min-height: 20px;
+  padding: 11px 20px;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 20px;
   text-decoration: none;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
   color: #ffffff;
   color: rgba(255, 255, 255, 1.0);
   background-color: #293449;
@@ -565,7 +570,7 @@ img {
   vertical-align: top;
 }
 
-.main-navigation li a {
+.main-navigation a {
   display: block;
   padding: 19px 29px;
   font-size: 17px;
@@ -574,11 +579,11 @@ img {
   color: #ffffff;
 }
 
-.main-navigation li a:hover {
+.main-navigation a:hover {
   background-color: #293449;
 }
 
-.main-navigation li a:active {
+.main-navigation a:active {
   color: #8E8E8E;
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
@@ -675,7 +680,7 @@ img {
   display: inline-block;
   vertical-align: middle;
   padding: 5px 30px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -757,7 +762,7 @@ img {
   overflow: hidden;
 }
 
-.offer-slide .slide-header h2 {
+.offer-slide .slide-title {
   margin: 0px;
   margin-bottom: 5px;
   font-size: 36px;
@@ -770,7 +775,7 @@ img {
 
 .offer-slide .slide-desc {
   margin: 0px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   white-space: nowrap;
@@ -817,7 +822,7 @@ img {
   opacity: 0;
 }
 
-.offers-slider .slider-controls {
+.offers-slider-controls {
   position: absolute;
   bottom: 36px;
   left: 50%;
@@ -831,7 +836,7 @@ img {
   z-index: 70;
 }
 
-.offers-slider .slider-controls label {
+.offers-slider-controls label {
   display: inline-block;
   vertical-align: top;
   width: 6px;
@@ -844,8 +849,8 @@ img {
   cursor: pointer;
 }
 
-.offers-slider #btn-1:checked ~ .slider-controls label[for="btn-1"],
-.offers-slider #btn-2:checked ~ .slider-controls label[for="btn-2"] {
+.offers-slider #btn-1:checked ~ .offers-slider-controls label[for="btn-1"],
+.offers-slider #btn-2:checked ~ .offers-slider-controls label[for="btn-2"] {
   background: #ee3643;
 }
 
@@ -918,7 +923,7 @@ img {
   margin-right: 20px;
   margin-bottom: 20px;
   vertical-align: top;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -958,7 +963,7 @@ img {
   width: 135px;
   margin: 0 auto 7px;
   padding: 10px 0;
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -1157,7 +1162,7 @@ img {
 
 .services p {
   margin: 0px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
@@ -1251,7 +1256,7 @@ img {
   top: 45px;
   left: 320px;
   height: 240px;
-  width: 540px;
+  width: 375px;
   z-index: 60;
   overflow: hidden;
 }
@@ -1318,7 +1323,7 @@ img {
 .information p {
   margin: 0px;
   margin-bottom: 23px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
@@ -1601,11 +1606,15 @@ img {
   width: 196px;
   margin: 0;
   padding: 8px 10px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   border: 2px solid #d7dcde;
   border-radius: 3px;
+}
+
+.message-form input[type="text"]:focus {
+  outline: none;
 }
 
 .message-form .user-message {
@@ -1613,6 +1622,10 @@ img {
   width: 436px;
   min-height: 94px;
   resize: none;
+}
+
+.message-form .user-message:focus {
+  outline: none;
 }
 
 .message-form input[type="submit"] {
@@ -1953,7 +1966,7 @@ img {
 .breadcrumbs span {
   margin: 0px;
   padding: 0px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: normal;
   vertical-align: middle;
@@ -1973,7 +1986,7 @@ img {
   padding: 30px;
   padding-top: 28px;
   margin-bottom: 20px;
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1991,7 +2004,7 @@ img {
   padding: 8px 15px;
   padding-top: 6px;
   margin-bottom: 20px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
@@ -2026,7 +2039,7 @@ img {
 .filter-title {
   margin: 0px;
   margin-bottom: 20px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 15px;
   font-weight: bold;
@@ -2081,15 +2094,16 @@ img {
 }
 
 .price-controls {
-  font-family: 'PTSans', 'Arial', sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: normal;
+  font-size: 0px;
 }
 
 .price-controls input {
   width: 55px;
   padding: 10px 20px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
   text-align: center;
   color: #000000;
   background-color: #f7f3ec;
@@ -2097,11 +2111,18 @@ img {
   border-radius: 3px;
 }
 
+.price-controls input:focus {
+  outline: none;
+}
+
 .price-controls .price-sep {
-  margin: 0px 5px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  display: inline-block;
+  width: 30px;
+  margin: 0px;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 10px;
   line-height: 18px;
+  text-align: center;
 }
 
 
@@ -2123,7 +2144,7 @@ img {
 }
 
 .filter-list label {
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: normal;
@@ -2174,7 +2195,7 @@ img {
 .filter-list input[type="radio"] + .radio-indicator {
   position: absolute;
   top: 1px;
-  left: 0px;
+  left: 1px;
   font-family: "symbols-technomart";
   font-size: 28px;
   line-height: 20px;
@@ -2204,7 +2225,7 @@ img {
 
 .button-filter {
   width: 140px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
@@ -2226,7 +2247,7 @@ img {
 
 /*=======================================================================
  *    
- *  RIGTH PANEL OF PRODUCT'S LIST
+ *  RIGTH PANEL OF PRODUCT"S LIST
  *
  *=======================================================================
  */
@@ -2310,7 +2331,7 @@ img {
   height: 38px;
   padding: 0 10px;
   margin-right: 5px;
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 38px;
   text-align: center;
@@ -2365,7 +2386,7 @@ img {
 }
 
 .post-description p {
-  font-family: 'PTSans', 'Arial', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
