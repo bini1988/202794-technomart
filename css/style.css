@@ -171,7 +171,7 @@
 
 
 /*=======================================================================
- *    
+ *
  *  PAGE HTML
  *
  *=======================================================================
@@ -234,7 +234,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  PAGE HEADER
  *
  *=======================================================================
@@ -300,24 +300,7 @@ img {
   background-color: #ffffff;
 }
 
-.search-form input[name="search-query"]::-webkit-input-placeholder {
-  color: #ffffff;
-  opacity: 1;
-}
-
-.search-form input[name="search-query"]::-moz-placeholder {
-  /* firefox 19+ */
-  color: #ffffff;
-  opacity: 1;
-}
-
-.search-form input[name="search-query"]:-ms-input-placeholder {
-  /* ie */
-  color: #ffffff;
-  opacity: 1;
-}
-
-.search-form input[name="search-query"]:-moz-placeholder {
+.search-form input[name="search-query"]::placeholder {
   color: #ffffff;
   opacity: 1;
 }
@@ -591,7 +574,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  MAIN PAGE CONTENT
  *
  *=======================================================================
@@ -604,7 +587,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  OFFERS
  *
  *=======================================================================
@@ -686,8 +669,6 @@ img {
   line-height: 18px;
   color: #ffffff;
   background-color: #ee3643;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -883,7 +864,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  POPULAR PRODUCTS
  *
  *=======================================================================
@@ -1096,7 +1077,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  POPULAR PRODUCERS
  *
  *=======================================================================
@@ -1149,7 +1130,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  SERVICES
  *
  *=======================================================================
@@ -1309,7 +1290,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  INFORMATION BLOCK
  *
  *=======================================================================
@@ -1381,7 +1362,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  FOOTER
  *
  *=======================================================================
@@ -1530,7 +1511,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  MODAL DIALOGS
  *
  *=======================================================================
@@ -1715,13 +1696,11 @@ img {
 
 .modal-content-show-1 {
   display: block;
-  -webkit-animation: zoomin 0.5s;
   animation: zoomin 0.5s;
 }
 
 .modal-content-show-2 {
   display: block;
-  -webkit-animation: flipin 0.5s;
   animation: flipin 0.5s;
 }
 
@@ -1751,64 +1730,33 @@ img {
 }
 
 .modal-content-close::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 
 /* Анимация для всплывающих окон */
 
-@-webkit-keyframes zoomin {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 @keyframes zoomin {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
     transform: scale3d(.3, .3, .3);
   }
   50% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes flipin {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 
 @keyframes flipin {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -1912,7 +1860,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  PAGE CATALOG CONTENT
  *
  *=======================================================================
@@ -2128,7 +2076,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  PRODUCERS AND POWER FILTERS
  *
  *=======================================================================
@@ -2247,7 +2195,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  RIGTH PANEL OF PRODUCT"S LIST
  *
  *=======================================================================
@@ -2364,7 +2312,7 @@ img {
 
 
 /*=======================================================================
- *    
+ *
  *  POST DESCRIPTION SECTION
  *
  *=======================================================================

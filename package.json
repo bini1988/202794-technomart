@@ -1,0 +1,43 @@
+{
+  "name": "technomart",
+  "version": "1.0.0",
+  "description": "* Студент: [Николай К](https://up.htmlacademy.ru/htmlcss/13/user/202794).\r * Наставник: `Иван Смирнов`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bini1988/technomart.git"
+  },
+  "keywords": [
+    "technomart",
+    "html",
+    "css",
+    "js",
+    "gulp"
+  ],
+  "author": "Nikolai Karastelev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bini1988/technomart/issues"
+  },
+  "homepage": "https://github.com/bini1988/technomart#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve"
+  }
+}
