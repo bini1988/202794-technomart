@@ -1,43 +1,33 @@
-# Личный проект «Техномарт»
+# Проект «Техномарт»
 
-* Студент: [Николай К](https://up.htmlacademy.ru/htmlcss/13/user/202794).
-* Наставник: `Иван Смирнов`.
+* Вёрстка: [Николай Карастелев](https://github.com/bini1988).
+* Макет: [HTML Academy](https://htmlacademy.ru).
 
----
+## Описание
+Проект «Техномарт» был выполнен в рамках пройденного онлайн‑курса «Базовый HTML и CSS» от HTML Academy.
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitignore`, `Contributing.md`, `Readme.md`._
+* Используемые технологии: _HTML, CSS, JS_.
+* Автоматизация: _Gulp_.
+* Фреймворки: _нет_
+* Препроцессоры: _нет_
+* JS модули: _всплывающие окна, слайдер_.
 
----
+## Ссылки
 
-### Памятка
-
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-htmlcss/202794-technomart) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391960/7a6d69bc-bdfc-11e5-907b-2d492ab975bc.jpg">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391959/7a69a0de-bdfc-11e5-9d47-d9e7197b3a20.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Нажмите кнопку с иконкой компьютера и стрелкой, чтобы клонировать репозиторий через программу [GitHub Desktop](https://desktop.github.com):
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391902/17d49924-bdfc-11e5-8864-05fbcbddbb90.jpg">
-
-Программа клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github.svg"></a>
-
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Базовый HTML и CSS](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
+<table>
+  <tr>
+  <th><a href="http://bini1988.github.io/technomart/index.html">Главная страница</a></th>
+  <th><a href="http://bini1988.github.io/technomart/catalog.html">Страница каталог товаров</a></th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://cloud.githubusercontent.com/assets/8654155/21808560/e2ef15f4-d754-11e6-97ff-8b18bfaa5da4.jpg" target="_blank">
+        <img src="https://cloud.githubusercontent.com/assets/8654155/21808560/e2ef15f4-d754-11e6-97ff-8b18bfaa5da4.jpg" width="250" alt="Главная страница">
+      </a>
+    </td>
+    <td>
+      <a href="https://cloud.githubusercontent.com/assets/8654155/21808583/f47ffcf2-d754-11e6-8dbe-58620f2c543c.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/8654155/21808583/f47ffcf2-d754-11e6-8dbe-58620f2c543c.jpg" width="250" alt="Страница каталог товаров"></a>
+    </td>
+  </tr>
+</table>
+ 
