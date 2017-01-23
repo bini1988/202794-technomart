@@ -9,7 +9,7 @@ var cssnano = require('gulp-cssnano');
 
 var imagemin = require("gulp-imagemin");
 
-var uglify = require("gulp-uglifyjs");
+var minify = require("gulp-minify");
 
 var server = require("browser-sync").create();
 
@@ -52,17 +52,12 @@ gulp.task("style-build", function() {
 
 /* JS */
 
-gulp.task("scripts", function() {
-  return gulp.src("js/script.js")
-    .pipe(uglify())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("js"));
-});
-
 gulp.task("scripts-build", function() {
-  return gulp.src(["js/**/*.js", "!js/**/*.min.js"])
-    .pipe(uglify())
-    .pipe(rename({ suffix: ".min" }))
+  return gulp.src("js/**/*.js")
+    .pipe(minify({
+      noSource: 1,
+      ext: { min:".js" }
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -121,6 +116,6 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch(["css/**/*.css", "!css/**/*.min.css"], ["style"]);
-  gulp.watch(["js/**/*.js", "!js/**/*.min.js"], ["scripts"]);
+  gulp.watch("js/src/*.js").on("change", server.reload);
   gulp.watch("*.html").on("change", server.reload);
 });

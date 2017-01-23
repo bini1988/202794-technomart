@@ -4,7 +4,8 @@
   "description": "* Студент: [Николай К](https://up.htmlacademy.ru/htmlcss/13/user/202794).\r * Наставник: `Иван Смирнов`.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -30,14 +31,10 @@
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.1.1",
+    "gulp-minify": "0.0.14",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglifyjs": "^0.6.2",
     "run-sequence": "^1.2.2"
-  },
-  "scripts": {
-    "build": "gulp build",
-    "start": "gulp serve"
   }
 }
