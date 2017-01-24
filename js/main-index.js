@@ -8,7 +8,7 @@
 require([
   "js/form",
   "js/map",
-  "js/modal-dialog",
+  "js/modal-dialogs",
   "js/product-items",
   "js/slider"], function() {
 

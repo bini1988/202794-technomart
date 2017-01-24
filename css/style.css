@@ -1536,29 +1536,71 @@ img {
   border: none;
 }
 
+/* Модальное окно */
 
-/* Форма сообщения пользователя */
-
-.modal-content-message {
+.modal-dialog {
   position: fixed;
   top: 50%;
   left: 50%;
   display: none;
-  width: 460px;
-  height: 380px;
   padding: 0px 80px;
   padding-top: 50px;
-  margin-left: -310px;
-  margin-top: -215px;
+  font-size: 0px;
   color: #000000;
   background-color: #ffffff;
-  box-shadow: 0 10px 30px 0 #8E8E8E, inset 0 7px 0 0 #ee3643, inset 0 -112px 0 0 #f1f1f1;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), inset 0 7px 0 0 #ee3643, inset 0 -112px 0 0 #f1f1f1;
+  transform: translate(-50%, -50%);
   z-index: 120;
 }
 
-.modal-content-message .modal-content-close {
+.modal-dialog-close {
+  position: absolute;
   top: 10px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  font-size: 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-dialog-close::before,
+.modal-dialog-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 25px;
+  height: 5px;
+  background-color: #ee3643;
+  border-radius: 2px;
+}
+
+.modal-dialog-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-dialog-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-dialog-show-1 {
+  display: block;
+  animation: zoomin 0.5s;
+}
+
+.modal-dialog-show-2 {
+  display: block;
+  animation: flipin 0.5s;
+}
+
+/* Форма сообщения пользователя */
+
+.modal-content-message {
+  width: 460px;
+  min-height: 380px;
 }
 
 .message-form label {
@@ -1620,26 +1662,8 @@ img {
 /* Диалоговое окно */
 
 .modal-content-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  display: none;
   width: 460px;
   min-height: 230px;
-  padding: 0px 80px;
-  padding-top: 50px;
-  margin-left: -310px;
-  margin-top: -140px;
-  font-size: 0px;
-  color: #000000;
-  background-color: #ffffff;
-  box-shadow: 0 10px 30px 0 #8E8E8E, inset 0 7px 0 0 #ee3643, inset 0 -112px 0 0 #f1f1f1;
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), inset 0 7px 0 0 #ee3643, inset 0 -112px 0 0 #f1f1f1;
-  z-index: 120;
-}
-
-.modal-content-dialog .modal-content-close {
-  top: 10px;
 }
 
 .modal-content-dialog .dialog-message {
@@ -1689,52 +1713,6 @@ img {
 
 .overlay-hide {
   display: block;
-}
-
-
-/* Общие для форм стили */
-
-.modal-content-show-1 {
-  display: block;
-  animation: zoomin 0.5s;
-}
-
-.modal-content-show-2 {
-  display: block;
-  animation: flipin 0.5s;
-}
-
-.modal-content-close {
-  position: absolute;
-  top: 6px;
-  right: 2px;
-  width: 30px;
-  height: 30px;
-  font-size: 0px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.modal-content-close::before,
-.modal-content-close::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  width: 25px;
-  height: 5px;
-  background-color: #ee3643;
-  border-radius: 2px;
-}
-
-.modal-content-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-content-close::after {
-  transform: rotate(-45deg);
 }
 
 

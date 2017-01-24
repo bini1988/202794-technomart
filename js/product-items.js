@@ -8,6 +8,8 @@
 define(function() {
 
   /* Всплывающее сообщение карточки товаров */
+  var modalDialog = document.querySelector(".modal-content-dialog");
+
   var modalDialogOpenBtns = document.querySelectorAll(".product-item .actions .buy");
 
   var overlay = document.querySelector(".overlay");
@@ -17,7 +19,7 @@ define(function() {
     modalDialogOpenBtns[counter].addEventListener("click", function(event) {
       event.preventDefault();
 
-      modalDialog.classList.add("modal-content-show-1");
+      modalDialog.classList.add("modal-dialog-show-1");
       overlay.classList.add("overlay-show");
     });
   }

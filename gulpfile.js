@@ -116,6 +116,6 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch(["css/**/*.css", "!css/**/*.min.css"], ["style"]);
-  gulp.watch("js/src/*.js").on("change", server.reload);
+  gulp.watch("js/**/*.js").on("change", server.reload);
   gulp.watch("*.html").on("change", server.reload);
 });
