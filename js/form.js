@@ -9,19 +9,22 @@ define(function() {
 
   /* Форма обратной связи */
 
-  var modalMessage = document.querySelector(".modal-content-message");
+  var modalMessage = document.querySelector("#message-dialog");
 
-  var modalMessageNameField = modalMessage.querySelector("[name=user-name]");
+  if (modalMessage) {
+
+    var modalMessageNameField = modalMessage.querySelector("[name=user-name]");
 
 
-  var modalMessageOpenBtn = document.querySelector(".btn-send-message");
+    var modalMessageOpenBtn = document.querySelector(".btn-send-message");
 
-  modalMessageOpenBtn.addEventListener("click", function(event) {
-    event.preventDefault();
+    modalMessageOpenBtn.addEventListener("click", function(event) {
+      event.preventDefault();
 
-    modalMessage.classList.add("modal-dialog-show-1");
+      modalMessage.classList.add("modal-dialog-show-1");
 
-    modalMessageNameField.focus();
-  });
+      modalMessageNameField.focus();
+    });
+  }
 
 });

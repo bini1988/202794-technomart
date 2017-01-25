@@ -8,7 +8,7 @@
 define(function() {
 
   /* Всплывающее сообщение карточки товаров */
-  var modalDialog = document.querySelector(".modal-content-dialog");
+  var modalDialog = document.querySelector("#item-dialog");
 
   var modalDialogOpenBtns = document.querySelectorAll(".product-item .actions .buy");
 

@@ -337,30 +337,38 @@
       </div>
     </div>
   </footer>
-  <div class="modal-dialog modal-content-message" id="message-dialog">
+  <div class="modal-dialog" id="message-dialog">
     <button class="modal-dialog-close" type="button" title="Закрыть">Закрыть</button>
     <form class="message-form" action="/" method="post">
-      <div class="user-id clearfix">
-        <div class="left-column">
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+      <div class="modal-dialog-content">
+        <div class="user-id clearfix">
+          <div class="left-column">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+          </div>
+          <div class="right-column">
+            <label for="mail">Ваш e-mail:</label>
+            <input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа" required>
+          </div>
         </div>
-        <div class="right-column">
-          <label for="mail">Ваш e-mail:</label>
-          <input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа" required>
-        </div>
+        <label for="message">Текст письма:</label>
+        <textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме" required></textarea>
       </div>
-      <label for="message">Текст письма:</label>
-      <textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме" required></textarea>
-      <input class="btn" type="submit" value="Отправить">
+      <div class="modal-dialog-footer">
+        <input class="btn" type="submit" value="Отправить">
+      </div>
     </form>
   </div>
   <div class="overlay"></div>
-  <div class="modal-dialog modal-content-dialog" id="item-dialog">
+  <div class="modal-dialog" id="item-dialog">
     <button class="modal-dialog-close" type="button" title="Закрыть">Закрыть</button>
-    <div class="dialog-message message-icon-ok">Товар добавлен в корзину!</div>
-    <a class="btn" href="order.html">Оформить заказ</a>
-    <button class="btn btn-cancel">Продолжить покупки</button>
+    <div class="modal-dialog-content">
+      <div class="dialog-message message-icon-ok">Товар добавлен в корзину!</div>
+    </div>
+    <div class="modal-dialog-footer">
+      <a class="btn" href="order.html">Оформить заказ</a>
+      <button class="btn btn-cancel">Продолжить покупки</button>
+    </div>
   </div>
   <script type="text/javascript" src="js/main-index.js"></script>
 </body>

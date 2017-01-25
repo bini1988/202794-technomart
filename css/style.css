@@ -1543,12 +1543,10 @@ img {
   top: 50%;
   left: 50%;
   display: none;
-  padding: 0px 80px;
-  padding-top: 50px;
   font-size: 0px;
   color: #000000;
   background-color: #ffffff;
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), inset 0 7px 0 0 #ee3643, inset 0 -112px 0 0 #f1f1f1;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), inset 0 7px 0 0 #ee3643;
   transform: translate(-50%, -50%);
   z-index: 120;
 }
@@ -1570,7 +1568,7 @@ img {
 .modal-dialog-close::after {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 0px;
   width: 25px;
   height: 5px;
@@ -1586,6 +1584,30 @@ img {
   transform: rotate(-45deg);
 }
 
+.modal-dialog-content {
+  padding: 53px 80px 37px;
+  width: 460px;
+}
+
+.modal-dialog-footer {
+  padding: 37px 80px;
+  background-color: #f1f1f1;
+}
+
+.modal-dialog .btn {
+  box-sizing: border-box;
+  width: 220px;
+}
+
+.modal-dialog .btn:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.modal-dialog .btn-cancel {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 .modal-dialog-show-1 {
   display: block;
   animation: zoomin 0.5s;
@@ -1597,11 +1619,6 @@ img {
 }
 
 /* Форма сообщения пользователя */
-
-.modal-content-message {
-  width: 460px;
-  min-height: 380px;
-}
 
 .message-form label {
   display: block;
@@ -1627,9 +1644,10 @@ img {
 
 .message-form input[type="text"],
 .message-form .user-message {
-  width: 196px;
+  box-sizing: border-box;
+  width: 220px;
   margin: 0;
-  padding: 8px 10px;
+  padding: 8px 15px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1643,8 +1661,9 @@ img {
 
 .message-form .user-message {
   display: block;
-  width: 436px;
-  min-height: 94px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 114px;
   resize: none;
 }
 
@@ -1652,26 +1671,16 @@ img {
   outline: none;
 }
 
-.message-form input[type="submit"] {
+.message-form .btn {
   width: 100%;
-  margin-top: 74px;
-  margin-bottom: 37px;
 }
 
+/* Диалоговое окно пользовательское сообщение */
 
-/* Диалоговое окно */
-
-.modal-content-dialog {
-  width: 460px;
-  min-height: 230px;
-}
-
-.modal-content-dialog .dialog-message {
+.dialog-message {
   width: 360px;
-  min-height: 70px;
-  padding: 0px;
-  padding-top: 20px;
-  margin-bottom: 25px;
+  min-height: 50px;
+  padding: 16px;
   padding-left: 100px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
@@ -1684,17 +1693,6 @@ img {
   background-position: 0px 0px;
 }
 
-.modal-content-dialog .btn {
-  margin: 37px 0px;
-  width: 200px;
-}
-
-.modal-content-dialog .btn-cancel {
-  width: 220px;
-  margin-left: 20px;
-  color: #000000;
-  background-color: #ffffff;
-}
 
 .overlay {
   display: none;

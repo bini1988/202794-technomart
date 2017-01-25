@@ -6,8 +6,7 @@
 "use strict";
 
 require([
-  //"js/form",
-  //"js/modal-dialog",
+  "js/modal-dialogs",
   "js/product-items"], function() {
 
 });
