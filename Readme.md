@@ -2,15 +2,16 @@
 
 * Вёрстка: [Николай Карастелев](https://github.com/bini1988).
 * Макет: [HTML Academy](https://htmlacademy.ru).
+* Спецификация: [Specification.md](https://github.com/bini1988/technomart/blob/master/Specification.md).
 
 ## Описание
 Проект «Техномарт» был выполнен в рамках пройденного онлайн‑курса «Базовый HTML и CSS» от HTML Academy.
 
-* Используемые технологии: _HTML, CSS, JS_.
+* Используемые технологии: _HTML, CSS, JS, AMD_.
 * Автоматизация: _Gulp_.
 * Фреймворки: _нет_
 * Препроцессоры: _нет_
-* JS модули: _всплывающие окна, слайдер_.
+* JS модули: _[всплывающие окна](https://github.com/bini1988/technomart/blob/master/js/modal-dialogs.js), [слайдер](https://github.com/bini1988/technomart/blob/master/js/slider.js), [интерактивная карта](https://github.com/bini1988/technomart/blob/master/js/map.js)_.
 
 ## Ссылки
 
@@ -30,4 +31,4 @@
     </td>
   </tr>
 </table>
- 
+
