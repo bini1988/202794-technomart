@@ -1517,25 +1517,6 @@ img {
  *=======================================================================
  */
 
-.modal-content-map {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  display: none;
-  width: 940px;
-  height: 446px;
-  padding: 0px;
-  margin: 0px;
-  margin-left: -470px;
-  box-shadow: 0 10px 30px 0 #8E8E8E;
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7);
-  z-index: 100;
-}
-
-.modal-content-map iframe {
-  border: none;
-}
-
 /* Модальное окно */
 
 .modal-dialog {
@@ -1546,7 +1527,7 @@ img {
   font-size: 0px;
   color: #000000;
   background-color: #ffffff;
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), inset 0 7px 0 0 #ee3643;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -50%);
   z-index: 120;
 }
@@ -1587,6 +1568,7 @@ img {
 .modal-dialog-content {
   padding: 53px 80px 37px;
   width: 460px;
+  box-shadow: inset 0 7px 0 0 #ee3643;
 }
 
 .modal-dialog-footer {
@@ -1608,14 +1590,19 @@ img {
   background-color: #ffffff;
 }
 
-.modal-dialog-show-1 {
-  display: block;
-  animation: zoomin 0.5s;
+
+/* Всплывающпая карта*/
+
+.map-dialog {
+  position: absolute;
+  top: 30px;
+  width: 940px;
+  height: 446px;
+  transform: translate(-50%, 0);
 }
 
-.modal-dialog-show-2 {
-  display: block;
-  animation: flipin 0.5s;
+.map-dialog iframe {
+  border: none;
 }
 
 /* Форма сообщения пользователя */
@@ -1713,6 +1700,15 @@ img {
   display: block;
 }
 
+.modal-dialog-show-1 {
+  display: block;
+  animation: zoomin 0.5s;
+}
+
+.modal-dialog-show-2 {
+  display: block;
+  animation: flipin 0.5s;
+}
 
 /* Анимация для всплывающих окон */
 
@@ -1729,11 +1725,11 @@ img {
 @keyframes flipin {
   from {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate(150%, 0);
   }
   to {
     opacity: 1;
-    transform: none;
+    transform: translate(-50%, 0);
   }
 }
 

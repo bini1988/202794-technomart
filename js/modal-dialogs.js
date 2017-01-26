@@ -19,6 +19,7 @@ define(function() {
     dialogCloseBtn.addEventListener("click", function(event) {
       event.preventDefault();
 
+      dialog.classList.remove("modal-dialog-show-2");
       dialog.classList.remove("modal-dialog-show-1");
       overlay.classList.remove("overlay-show");
     });
@@ -33,6 +34,7 @@ define(function() {
 
       Array.prototype.forEach.call(modalDialogs, function(dialog, index) {
 
+        dialog.classList.remove("modal-dialog-show-2");
         dialog.classList.remove("modal-dialog-show-1");
         overlay.classList.remove("overlay-show");
       });
