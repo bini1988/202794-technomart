@@ -1,0 +1,64 @@
+[{
+  "url": "img/product-2.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 3000",
+  "discount": 22500,
+  "price": 15500,
+  "currency": "Р."
+}, {
+  "url": "img/product-3.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 6000",
+  "discount": 30500,
+  "price": 24500,
+  "currency": "Р."
+}, {
+  "url": "img/product-2.jpg",
+  "new": true,
+  "title": "Перфоратов BOSCH BFG 2000",
+  "discount": null,
+  "price": 12500,
+  "currency": "Р."
+}, {
+  "url": "img/product-2.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 3000",
+  "discount": 22500,
+  "price": 13500,
+  "currency": "Р."
+}, {
+  "url": "img/product-3.jpg",
+  "new": true,
+  "title": "Перфоратов BOSCH BFG 6000",
+  "discount": 30500,
+  "price": 26600,
+  "currency": "Р."
+}, {
+  "url": "img/product-2.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 2000",
+  "discount": null,
+  "price": 10500,
+  "currency": "Р."
+}, {
+  "url": "img/product-2.jpg",
+  "new": true,
+  "title": "Перфоратов BOSCH BFG 3000",
+  "discount": 22500,
+  "price": 12900,
+  "currency": "Р."
+}, {
+  "url": "img/product-3.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 6000",
+  "discount": 30500,
+  "price": 13800,
+  "currency": "Р."
+}, {
+  "url": "img/product-2.jpg",
+  "new": false,
+  "title": "Перфоратов BOSCH BFG 2000",
+  "discount": null,
+  "price": 28500,
+  "currency": "Р."
+}]
