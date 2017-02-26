@@ -1,0 +1,1 @@
+"use strict";define(function(){for(var e=document.querySelector("#item-dialog"),t=document.querySelectorAll(".product-item .actions .buy"),o=document.querySelector(".overlay"),c=0;c<t.length;c++)t[c].addEventListener("click",function(t){t.preventDefault(),e.classList.add("modal-dialog-show-1"),o.classList.add("overlay-show")})});

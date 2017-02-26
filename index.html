@@ -6,6 +6,7 @@
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <script type="text/javascript" src="js/require.js"></script>
 </head>
 
 <body>
@@ -281,8 +282,8 @@
             <a class="btn btn-send-message" href="form.html" target="_blank">Заблудились? Напишите нам!</a>
           </section>
         </div>
-        <div class="modal-content-map">
-          <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <div class="modal-dialog map-dialog" id="map-dialog">
+          <button class="modal-dialog-close" type="button" title="Закрыть">Закрыть</button>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123993!2d30.320894616078068!3d59.9387968690479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462565440417" width="940" height="446" allowfullscreen></iframe>
         </div>
       </div>
@@ -336,32 +337,40 @@
       </div>
     </div>
   </footer>
-  <div class="modal-content-message">
-    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+  <div class="modal-dialog" id="message-dialog">
+    <button class="modal-dialog-close" type="button" title="Закрыть">Закрыть</button>
     <form class="message-form" action="/" method="post">
-      <div class="user-id clearfix">
-        <div class="left-column">
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+      <div class="modal-dialog-content">
+        <div class="user-id clearfix">
+          <div class="left-column">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+          </div>
+          <div class="right-column">
+            <label for="mail">Ваш e-mail:</label>
+            <input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа" required>
+          </div>
         </div>
-        <div class="right-column">
-          <label for="mail">Ваш e-mail:</label>
-          <input type="text" id="mail" name="user-mail" placeholder="Для отправки ответа" required>
-        </div>
+        <label for="message">Текст письма:</label>
+        <textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме" required></textarea>
       </div>
-      <label for="message">Текст письма:</label>
-      <textarea class="user-message" name="user-message" id="message" placeholder="В свободной форме" required></textarea>
-      <input class="btn" type="submit" value="Отправить">
+      <div class="modal-dialog-footer">
+        <input class="btn" type="submit" value="Отправить">
+      </div>
     </form>
   </div>
   <div class="overlay"></div>
-  <div class="modal-content-dialog">
-    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-    <div class="dialog-message message-icon-ok">Товар добавлен в корзину!</div>
-    <a class="btn" href="order.html">Оформить заказ</a>
-    <button class="btn btn-cancel">Продолжить покупки</button>
+  <div class="modal-dialog" id="item-dialog">
+    <button class="modal-dialog-close" type="button" title="Закрыть">Закрыть</button>
+    <div class="modal-dialog-content">
+      <div class="dialog-message message-icon-ok">Товар добавлен в корзину!</div>
+    </div>
+    <div class="modal-dialog-footer">
+      <a class="btn" href="order.html">Оформить заказ</a>
+      <button class="btn btn-cancel">Продолжить покупки</button>
+    </div>
   </div>
-  <script src="js/script.min.js"></script>
+  <script type="text/javascript" src="js/main-index.js"></script>
 </body>
 
 </html>
