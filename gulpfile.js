@@ -1,121 +1,189 @@
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
+var gulp = require("gulp"),
+  // CSS process
+  postcss = require("gulp-postcss"),
+  autoprefixer = require("autoprefixer"),
+  concatCSS = require('gulp-concat-css'),
+  csscomb = require("gulp-csscomb"),
+  cssnano = require('gulp-cssnano'),
+  // Images process
+  imagemin = require("gulp-imagemin"),
+  // Js process
+  minify = require("gulp-minify"),
+  concat = require('gulp-concat'),
+  // create livereload server
+  server = require("browser-sync").create(),
+  // helpers
+  plumber = require("gulp-plumber"),
+  rename = require("gulp-rename"),
+  del = require("del"),
+  run = require("run-sequence");
 
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var cssnano = require('gulp-cssnano');
 
-var imagemin = require("gulp-imagemin");
+var path = {
+  build: {
+    self: "build",
+    css: "build/css",
+    html: "build",
+    fonts: "build/fonts",
+    js: "build/js",
+    img: "build/img"
+  },
+  src: {
+    self: "",
+    style: {
+      folder: "css/**/*.css",
+      self: "css/*.css"
+    },
+    html: {
+      folder: "**/*.html",
+      self: "*.html"
+    },
+    fonts: "fonts/**/*.{woff,woff2}",
+    img: "img/**/*.*",
+    script: {
+      folder: "js/**/*.js",
+      self: "js/*.js",
+      jquery: "js/libs/jquery/*.js",
+      libs: "js/libs/*.js"
+    }
+  }
+};
 
-var minify = require("gulp-minify");
-
-var server = require("browser-sync").create();
-
-var rename = require("gulp-rename");
-var del = require("del");
-var run = require("run-sequence");
-
-
-
-/* CSS */
 
 gulp.task("style", function() {
-  gulp.src("css/style.css")
+  return gulp.src(path.src.style.self)
     .pipe(plumber())
-    .pipe(postcss([
-      autoprefixer({browsers: [
-        "last 2 versions"
-      ]})
-    ]))
+    .pipe(concatCSS("style.css"))
+    .pipe(postcss([autoprefixer({ browsers: ["last 4 versions"] })]))
+    .pipe(csscomb())
+    .pipe(gulp.dest(path.build.css))
     .pipe(cssnano())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest("css"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest(path.build.css))
     .pipe(server.stream());
 });
 
-gulp.task("style-build", function() {
-
-  return gulp.src(["css/**/*.css", "!css/**/*.min.css"])
+gulp.task("build:style", function() {
+  return gulp.src(path.src.style.self)
     .pipe(plumber())
-    .pipe(postcss([
-      autoprefixer({browsers: [
-        "last 2 versions"
-      ]})
-    ]))
+    .pipe(concatCSS("style.css"))
+    .pipe(postcss([autoprefixer({ browsers: ["last 4 versions"] })]))
+    .pipe(csscomb())
+    .pipe(gulp.dest(path.build.css))
     .pipe(cssnano())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest(path.build.css));
 });
 
 
-/* JS */
-
-gulp.task("scripts-build", function() {
-  return gulp.src("js/**/*.js")
+gulp.task("js", function() {
+  return gulp.src([path.src.script.jquery,
+      path.src.script.libs,
+      path.src.script.self
+    ])
+    .pipe(concat("script.js"))
+    .pipe(gulp.dest(path.build.js))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(minify({
       noSource: 1,
-      ext: { min:".js" }
+      ext: { min: ".js" }
     }))
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest(path.build.js))
+    .pipe(server.reload({
+      stream: true
+    }));
+});
+
+gulp.task("build:js", function() {
+  return gulp.src([path.src.script.jquery,
+      path.src.script.libs,
+      path.src.script.self
+    ])
+    .pipe(concat("script.js"))
+    .pipe(gulp.dest(path.build.js))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(minify({
+      noSource: 1,
+      ext: { min: ".js" }
+    }))
+    .pipe(gulp.dest(path.build.js));
 });
 
 
-/* IMG */
+gulp.task("img", function() {
+  return gulp.src(path.src.img)
+    .pipe(gulp.dest(path.build.img))
+    .pipe(server.reload({
+      stream: true
+    }));
+});
 
-gulp.task("img-build", function() {
-  return gulp.src(["img/**/*.{png,jpg,gif,svg}", "!img/svg-img{,/**}"])
-    .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.jpegtran({ progressive: true })
-    ]))
-    .pipe(gulp.dest("build/img"));
+gulp.task("build:img", function() {
+  return gulp.src(path.src.img)
+    .pipe(imagemin({
+      progressive: true,
+      optimizationLevel: 3,
+      svgoPlugins: [{ cleanupIDs: false }],
+      multipass: true
+    }))
+    .pipe(gulp.dest(path.build.img));
 });
 
 
-/* Build project */
+gulp.task("html", function() {
+  return gulp.src(path.src.html.self)
+    .pipe(gulp.dest(path.build.html));
+});
 
-gulp.task("copy-files", function() {
-
-  return gulp.src([
-      "fonts/**/*.{woff,woff2}",
-      "*.html"
-    ], {
-      base : "."
-    })
-    .pipe(gulp.dest("build"));
+gulp.task("fonts", function() {
+  return gulp.src(path.src.fonts)
+    .pipe(gulp.dest(path.build.fonts));
 });
 
 
 gulp.task("clean", function() {
-  return del("build");
+  return del(path.build.self);
 });
 
 
-gulp.task("build", function(fn) {
-
-  run("clean",
-    "copy-files",
-    "style-build",
-    "scripts-build",
-    "img-build",
-    fn);
-});
-
-
-/* Dev server */
-
-gulp.task("serve", ["style"], function() {
+gulp.task("server", function() {
   server.init({
-    server: ".",
+    server: { baseDir: "./" + path.build.self },
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
+});
 
-  gulp.watch(["css/**/*.css", "!css/**/*.min.css"], ["style"]);
-  gulp.watch("js/**/*.js").on("change", server.reload);
-  gulp.watch("*.html").on("change", server.reload);
+gulp.task("watch", function() {
+  gulp.watch(path.src.style.folder, ["style"]);
+  gulp.watch(path.src.html.folder, ["html"]);
+  gulp.watch(path.src.fonts, ["fonts"]);
+  gulp.watch(path.src.img, ["img"]);
+  gulp.watch(path.src.script.folder, ["js"]);
+});
+
+gulp.task("build", function() {
+  run("clean",
+    "build:style",
+    "build:js",
+    "build:img",
+    "html",
+    "fonts"
+  );
+});
+
+gulp.task("default", function() {
+  run("clean",
+    "build:style",
+    "build:js",
+    "build:img",
+    "html",
+    "fonts",
+    "server",
+    "watch"
+  );
 });
