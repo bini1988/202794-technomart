@@ -723,12 +723,7 @@ img {
 }
 
 .offer-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: relative;
 }
 
 .offer-slide .slide-header {
@@ -812,39 +807,36 @@ img {
   padding: 0px;
   margin: 0px;
   margin-left: -80px;
+  font-size: 0px;
+  line-height: 0px;
   text-align: center;
   list-style: none;
   z-index: 70;
 }
 
-.offers-slider-controls label {
+.offers-slider-controls li {
   display: inline-block;
   vertical-align: top;
-  width: 6px;
-  height: 6px;
+  margin-right: 8px;
+}
+
+.offers-slider-controls li:last-child {
+  margin-right: 0px;
+}
+
+.offers-slider-controls li button {
+  width: 11px;
+  height: 11px;
   padding: 0px;
-  margin: 0px 3px;
+  margin: 0px;
   background: #ffffff;
   border: 3px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.offers-slider #btn-1:checked ~ .offers-slider-controls label[for="btn-1"],
-.offers-slider #btn-2:checked ~ .offers-slider-controls label[for="btn-2"] {
+.offers-slider-controls li.slick-active button {
   background: #ee3643;
-}
-
-.offer-slide {
-  display: none;
-}
-
-.offers-slider #btn-1:checked ~ .offer-slides .offer-slide:nth-child(1) {
-  display: block;
-}
-
-.offers-slider #btn-2:checked ~ .offer-slides .offer-slide:nth-child(2) {
-  display: block;
 }
 
 .offers-slider .btn {

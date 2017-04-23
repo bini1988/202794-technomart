@@ -121,38 +121,26 @@
 
   /* Слайдер на главной странице */
 
-  var slider = document.querySelector(".offers-slider");
+  var offerSlider = document.querySelector(".offers-slider");
 
-  if (slider) {
+  if (offerSlider) {
 
-    var sliderRadio = slider.querySelectorAll("[name='offers-toggle']");
+    var offerSlides = offerSlider.querySelector(".offer-slides"),
+      offerSlidesDots = offerSlider.querySelectorAll(".offers-slider-controls"),
+      prevSlideBtn = offerSlider.querySelector(".btn-slide.prev-slide"),
+      nextSlideBtn = offerSlider.querySelector(".btn-slide.next-slide");
 
-    var sliderRadioCount = sliderRadio.length;
-
-
-    var offersSliderPrevBtn = slider.querySelector(".prev-slide");
-
-    offersSliderPrevBtn.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      var currentIndex = parseInt(slider.querySelector("[name='offers-toggle']:checked").getAttribute("value"));
-
-      var nextIndex = (currentIndex + sliderRadioCount - 1) % sliderRadioCount;
-
-      sliderRadio[nextIndex].checked = true;
-    });
-
-
-    var offersSliderNextBtn = slider.querySelector(".next-slide");
-
-    offersSliderNextBtn.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      var currentIndex = parseInt(slider.querySelector("[name='offers-toggle']:checked").getAttribute("value"));
-
-      var nextIndex = (currentIndex + 1) % sliderRadioCount;
-
-      sliderRadio[nextIndex].checked = true;
+    $(offerSlides).slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      arrows: true,
+      prevArrow: prevSlideBtn,
+      nextArrow: nextSlideBtn,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      dots: true,
+      dotsClass: "offers-slider offers-slider-controls"
     });
 
   }
