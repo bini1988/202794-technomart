@@ -83,6 +83,7 @@ gulp.task("js", function() {
       path.src.script.libs,
       path.src.script.self
     ])
+    .pipe(plumber())
     .pipe(concat("script.js"))
     .pipe(gulp.dest(path.build.js))
     .pipe(rename({ suffix: ".min" }))
@@ -134,6 +135,14 @@ gulp.task("build:img", function() {
 
 gulp.task("html", function() {
   return gulp.src(path.src.html.self)
+    .pipe(gulp.dest(path.build.html))
+    .pipe(server.reload({
+      stream: true
+    }));
+});
+
+gulp.task("build:html", function() {
+  return gulp.src(path.src.html.self)
     .pipe(gulp.dest(path.build.html));
 });
 
@@ -171,7 +180,7 @@ gulp.task("build", function() {
     "build:style",
     "build:js",
     "build:img",
-    "html",
+    "build:html",
     "fonts"
   );
 });
@@ -181,7 +190,7 @@ gulp.task("default", function() {
     "build:style",
     "build:js",
     "build:img",
-    "html",
+    "build:html",
     "fonts",
     "server",
     "watch"
